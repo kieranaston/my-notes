@@ -1,0 +1,29 @@
+site_name: Kieran's notes
+
+theme:
+  name: material
+  favicon: img/favicon.ico
+  logo: img/logo.png
+  palette:
+    scheme: default
+    primary: brown
+
+nav:
+  - Home: index.md
+  - Surgical data science:
+      - Computer-assisted surgery:
+          - Overview: surgical-data-science/computer-assisted-surgery/what-is-surgical-data-science.md
+          - Computer-assisted surgery: surgical-data-science/computer-assisted-surgery/computer-assisted-surgery.md
+          - Transformation representations: surgical-data-science/computer-assisted-surgery/transformation-representations.md
+          - Transformations: surgical-data-science/computer-assisted-surgery/transformations.md
+          - Vectors and coordinates: surgical-data-science/computer-assisted-surgery/vectors-and-coordinates.md
+          - Pivot calibration and spin calibration: surgical-data-science/computer-assisted-surgery/pivot-calibration-and-spin-calibration.md
+          - Fiducial registration: surgical-data-science/computer-assisted-surgery/fiducial-registration.md
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.superfences
+
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js
