@@ -58,14 +58,71 @@ $$
 
 This is summing the dot product of each point in $A$ and its corresponding rotated point from $B \rightarrow A$. The dot product between the actual point and the rotated point originally from $B$ is representative of the correlation between the transformed points. So, maximizing this will give us the most accurate rotation.
 
-Solution, compute: $H=\sum_i\mathbf{p}_i^B\mathbf{p}_i^T$
+Solution, define: $H=\sum_i\mathbf{p}_i^B\mathbf{p}_i^{A^T}$
 
 Then compute the singular value decomposition of $H$.
 
 $$
-H=U
+H=U \Sigma V^T
 $$
 
-### Observations
+$$
+R ^ {B \rightarrow A} = VU^T
+$$
 
-Lambda is matrix of singular values.
+Where $H$ is the cross-covariance matrix between the points in frame $B$ and frame $A$. This captures the covariance between each pair of dimensions of the points in $B$ and $A$.
+* Essentially measures how much the points in $B$ vary with the points in $A$.
+
+$U$ and $V$ are orthogonal matrices containing the left singular vectors and right singular vectors, respectively.
+
+$\Sigma$ is a diagonal matrix containing the singular values of $H$. The singular values are non-negative and represent the magnitude of the action of $H$ in the directions of the corresponding singular vectors.
+
+
+
+### Observation 1
+
+$$
+\text{trace}(\sum_i \vec{p}_i^{A^T}R^{B \rightarrow A}\vec{p}_i^B) = \text{trace}(R^{B \rightarrow A}H)
+$$
+
+So the trace of summed dot product between points in $A$ and corresponding points transformed from $B$ to $A$ is given by the trace of the rotation matrix from $B$ to $A$ applied to $H$.
+
+The rotation matrix that maximizes this trace will provide the best alignment between the two point sets.
+
+### Observation 2
+
+If $B$ is orthogonal then $\text{trace}(BAA^T) \leq \text{trace}(AA^T)$
+
+This relationship shows that no matter what rotation you choose, the alignment quality can never exceed the macimum possible value.
+
+## Fiducial Registration Algorithm
+
+1. Compute the centroid of the points in $A$ and $B$: $\vec\mu^A=\frac{1}{n}\sum_i\vec{p}_i^A$, $\quad$ $\vec\mu^B=\frac{1}{n}\sum_i\vec{p}_i^B$
+2. Compute $H = \sum_i (\vec{p}_i^B-\vec\mu^B)(\vec{p}_i^A-\vec\mu^A)^T$
+3. Compute singular value decomposition (SVD) of $H=U\Sigma V^T$
+4. $R^{B \rightarrow A}=VU^T$
+5. $\vec{t}^{B \rightarrow A}=\vec\mu^A - R^{B \rightarrow A}\vec\mu^B$
+
+**How many points do we need for this?**
+
+We need at least 3 non-colinear points.
+
+### Measuring Accuracy
+
+**Fiducial registration error (FRE):**
+$$
+FRE = \sqrt{\frac{1}{n}\sum_i\lvert\lvert \vec{p}_i^A-T^{B \rightarrow A}\vec{p}_i^B\rvert\rvert^2}
+$$
+
+**Target registration error (TRE):**
+$$
+TRE = \sqrt{\frac{1}{n}\sum_i\lvert\lvert\vec{q}_i^A-T^{B \rightarrow A}\vec{q}_i^B\rvert\rvert}
+$$
+
+Where $\vec{q}_i$ are "target" fiducials with relevant position.
+
+FRE measures how well the fiducial points themselves align after registration. It calculates the root mean square distance between each fiducial point in coordinate system $A$ and its corresponding point from $B$ after applying the translation.
+
+TRE measures accuracy at points of actual interest (targets) that were not used for the registration. Calculates the distance between target points in coordinate system $A$ and their corresponding transformed points from $B$.
+
+The key difference is that FRE measures alignment at the registration points themselves, while TRE measures alignment at the clinically relevant target locations. 
