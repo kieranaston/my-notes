@@ -491,9 +491,42 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#observations" class="md-nav__link">
+  <a href="#observation-1" class="md-nav__link">
     <span class="md-ellipsis">
-      Observations
+      Observation 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#observation-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Observation 2
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fiducial-registration-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fiducial Registration Algorithm
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fiducial Registration Algorithm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#measuring-accuracy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Measuring Accuracy
     </span>
   </a>
   
@@ -574,9 +607,42 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#observations" class="md-nav__link">
+  <a href="#observation-1" class="md-nav__link">
     <span class="md-ellipsis">
-      Observations
+      Observation 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#observation-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Observation 2
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fiducial-registration-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fiducial Registration Algorithm
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fiducial Registration Algorithm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#measuring-accuracy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Measuring Accuracy
     </span>
   </a>
   
@@ -639,13 +705,50 @@
 \sum_i\mathbf{p}^{A^T}_iR^{B \rightarrow A}\mathbf{p}^B_i
 \]</div>
 <p>This is summing the dot product of each point in <span class="arithmatex">\(A\)</span> and its corresponding rotated point from <span class="arithmatex">\(B \rightarrow A\)</span>. The dot product between the actual point and the rotated point originally from <span class="arithmatex">\(B\)</span> is representative of the correlation between the transformed points. So, maximizing this will give us the most accurate rotation.</p>
-<p>Solution, compute: <span class="arithmatex">\(H=\sum_i\mathbf{p}_i^B\mathbf{p}_i^T\)</span></p>
+<p>Solution, define: <span class="arithmatex">\(H=\sum_i\mathbf{p}_i^B\mathbf{p}_i^{A^T}\)</span></p>
 <p>Then compute the singular value decomposition of <span class="arithmatex">\(H\)</span>.</p>
 <div class="arithmatex">\[
-H=U
+H=U \Sigma V^T
 \]</div>
-<h3 id="observations">Observations</h3>
-<p>Lambda is matrix of singular values.</p>
+<div class="arithmatex">\[
+R ^ {B \rightarrow A} = VU^T
+\]</div>
+<p>Where <span class="arithmatex">\(H\)</span> is the cross-covariance matrix between the points in frame <span class="arithmatex">\(B\)</span> and frame <span class="arithmatex">\(A\)</span>. This captures the covariance between each pair of dimensions of the points in <span class="arithmatex">\(B\)</span> and <span class="arithmatex">\(A\)</span>.
+* Essentially measures how much the points in <span class="arithmatex">\(B\)</span> vary with the points in <span class="arithmatex">\(A\)</span>.</p>
+<p><span class="arithmatex">\(U\)</span> and <span class="arithmatex">\(V\)</span> are orthogonal matrices containing the left singular vectors and right singular vectors, respectively.</p>
+<p><span class="arithmatex">\(\Sigma\)</span> is a diagonal matrix containing the singular values of <span class="arithmatex">\(H\)</span>. The singular values are non-negative and represent the magnitude of the action of <span class="arithmatex">\(H\)</span> in the directions of the corresponding singular vectors.</p>
+<h3 id="observation-1">Observation 1</h3>
+<div class="arithmatex">\[
+\text{trace}(\sum_i \vec{p}_i^{A^T}R^{B \rightarrow A}\vec{p}_i^B) = \text{trace}(R^{B \rightarrow A}H)
+\]</div>
+<p>So the trace of summed dot product between points in <span class="arithmatex">\(A\)</span> and corresponding points transformed from <span class="arithmatex">\(B\)</span> to <span class="arithmatex">\(A\)</span> is given by the trace of the rotation matrix from <span class="arithmatex">\(B\)</span> to <span class="arithmatex">\(A\)</span> applied to <span class="arithmatex">\(H\)</span>.</p>
+<p>The rotation matrix that maximizes this trace will provide the best alignment between the two point sets.</p>
+<h3 id="observation-2">Observation 2</h3>
+<p>If <span class="arithmatex">\(B\)</span> is orthogonal then <span class="arithmatex">\(\text{trace}(BAA^T) \leq \text{trace}(AA^T)\)</span></p>
+<p>This relationship shows that no matter what rotation you choose, the alignment quality can never exceed the macimum possible value.</p>
+<h2 id="fiducial-registration-algorithm">Fiducial Registration Algorithm</h2>
+<ol>
+<li>Compute the centroid of the points in <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>: <span class="arithmatex">\(\vec\mu^A=\frac{1}{n}\sum_i\vec{p}_i^A\)</span>, <span class="arithmatex">\(\quad\)</span> <span class="arithmatex">\(\vec\mu^B=\frac{1}{n}\sum_i\vec{p}_i^B\)</span></li>
+<li>Compute <span class="arithmatex">\(H = \sum_i (\vec{p}_i^B-\vec\mu^B)(\vec{p}_i^A-\vec\mu^A)^T\)</span></li>
+<li>Compute singular value decomposition (SVD) of <span class="arithmatex">\(H=U\Sigma V^T\)</span></li>
+<li><span class="arithmatex">\(R^{B \rightarrow A}=VU^T\)</span></li>
+<li><span class="arithmatex">\(\vec{t}^{B \rightarrow A}=\vec\mu^A - R^{B \rightarrow A}\vec\mu^B\)</span></li>
+</ol>
+<p><strong>How many points do we need for this?</strong></p>
+<p>We need at least 3 non-colinear points.</p>
+<h3 id="measuring-accuracy">Measuring Accuracy</h3>
+<p><strong>Fiducial registration error (FRE):</strong>
+$$
+FRE = \sqrt{\frac{1}{n}\sum_i\lvert\lvert \vec{p}_i^A-T^{B \rightarrow A}\vec{p}_i^B\rvert\rvert^2}
+$$</p>
+<p><strong>Target registration error (TRE):</strong>
+$$
+TRE = \sqrt{\frac{1}{n}\sum_i\lvert\lvert\vec{q}_i^A-T^{B \rightarrow A}\vec{q}_i^B\rvert\rvert}
+$$</p>
+<p>Where <span class="arithmatex">\(\vec{q}_i\)</span> are "target" fiducials with relevant position.</p>
+<p>FRE measures how well the fiducial points themselves align after registration. It calculates the root mean square distance between each fiducial point in coordinate system <span class="arithmatex">\(A\)</span> and its corresponding point from <span class="arithmatex">\(B\)</span> after applying the translation.</p>
+<p>TRE measures accuracy at points of actual interest (targets) that were not used for the registration. Calculates the distance between target points in coordinate system <span class="arithmatex">\(A\)</span> and their corresponding transformed points from <span class="arithmatex">\(B\)</span>.</p>
+<p>The key difference is that FRE measures alignment at the registration points themselves, while TRE measures alignment at the clinically relevant target locations. </p>
 
 
 
