@@ -20,6 +20,7 @@ nav:
           - Pivot calibration and spin calibration: surgical-data-science/computer-assisted-surgery/pivot-calibration-and-spin-calibration.md
           - Fiducial registration: surgical-data-science/computer-assisted-surgery/fiducial-registration.md
           - ICP registration: surgical-data-science/computer-assisted-surgery/icp-registration.md
+          - Image registration: surgical-data-science/computer-assisted-surgery/image-registration.md
 
 markdown_extensions:
   - pymdownx.arithmatex:
