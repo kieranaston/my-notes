@@ -636,12 +636,14 @@
 \]</div>
 <p>for all <span class="arithmatex">\(S\)</span>. This finds the best possible transformation from <span class="arithmatex">\(B\)</span> to <span class="arithmatex">\(A\)</span> for the point in <span class="arithmatex">\(B\)</span> and its the point in <span class="arithmatex">\(A\)</span> that is closest to its transformed version.</p>
 <p><strong>How do we make our initial estimate?</strong></p>
-<p>There are multiple different methods for getting an initial transformation estimate when doing ICP.
-* Assume <span class="arithmatex">\(T_0^{B \rightarrow A}=I\)</span>
-* Initially do fiducial registration with known correspondence to get <span class="arithmatex">\(T_0^{B \rightarrow A}\)</span> (on small number of points), then refine with ICP
-* Could compute <span class="arithmatex">\(T_0^{B \rightarrow A}\)</span> using fiducial registration on principal component vectors
-* Could try a set of initial rotations, do ICP, and compute FRE for each, then choose the one with smallest FRE</p>
-<p>It is worth noting that this method is sensitive to the initial estimate and this can affect whether we reach a global maxima or not. </p>
+<p>There are multiple different methods for getting an initial transformation estimate when doing ICP.</p>
+<ul>
+<li>Assume <span class="arithmatex">\(T_0^{B \rightarrow A}=I\)</span></li>
+<li>Initially do fiducial registration with known correspondence to get <span class="arithmatex">\(T_0^{B \rightarrow A}\)</span> (on small number of points), then refine with ICP</li>
+<li>Could compute <span class="arithmatex">\(T_0^{B \rightarrow A}\)</span> using fiducial registration on principal component vectors</li>
+<li>Could try a set of initial rotations, do ICP, and compute FRE for each, then choose the one with smallest FRE</li>
+</ul>
+<p>It is worth noting that this method is sensitive to the initial estimate and this can affect whether we reach a global maxima or not.</p>
 
 
 
