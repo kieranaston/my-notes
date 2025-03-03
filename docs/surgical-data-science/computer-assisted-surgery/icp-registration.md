@@ -42,9 +42,10 @@ for all $S$. This finds the best possible transformation from $B$ to $A$ for the
 **How do we make our initial estimate?**
 
 There are multiple different methods for getting an initial transformation estimate when doing ICP.
+
 * Assume $T_0^{B \rightarrow A}=I$
 * Initially do fiducial registration with known correspondence to get $T_0^{B \rightarrow A}$ (on small number of points), then refine with ICP
 * Could compute $T_0^{B \rightarrow A}$ using fiducial registration on principal component vectors
 * Could try a set of initial rotations, do ICP, and compute FRE for each, then choose the one with smallest FRE
 
-It is worth noting that this method is sensitive to the initial estimate and this can affect whether we reach a global maxima or not. 
+It is worth noting that this method is sensitive to the initial estimate and this can affect whether we reach a global maxima or not.
