@@ -9,10 +9,8 @@
       
       
       
-        <link rel="prev" href="../../..">
+        <link rel="prev" href="../icp-registration/">
       
-      
-        <link rel="next" href="../computer-assisted-surgery/">
       
       
       <link rel="icon" href="../../../img/favicon.ico">
@@ -20,7 +18,7 @@
     
     
       
-        <title>Overview - Kieran's notes</title>
+        <title>Image registration - Kieran's notes</title>
       
     
     
@@ -70,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#surgical-data-science" class="md-skip">
+        <a href="#image-registration" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              Image registration
             
           </span>
         </div>
@@ -291,31 +289,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Overview
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../what-is-surgical-data-science/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -325,71 +302,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#the-problem" class="md-nav__link">
-    <span class="md-ellipsis">
-      The Problem
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#data" class="md-nav__link">
-    <span class="md-ellipsis">
-      Data
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#applications" class="md-nav__link">
-    <span class="md-ellipsis">
-      Applications
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#challenges" class="md-nav__link">
-    <span class="md-ellipsis">
-      Challenges
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-do-we-approach-problems" class="md-nav__link">
-    <span class="md-ellipsis">
-      How do we approach problems?
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -553,10 +465,31 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../image-registration/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Image registration
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -566,6 +499,92 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#template-matching-registration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Template matching registration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#non-corresponding-feature-based-registration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Non-corresponding feature-based registration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Non-corresponding feature-based registration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#edge-point-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Edge point detection
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#corner-point-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Corner point detection
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Corner point detection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#harris-corner-detector" class="md-nav__link">
+    <span class="md-ellipsis">
+      Harris corner detector
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mutual-information-based-registration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mutual information-based registration
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -613,45 +632,66 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-problem" class="md-nav__link">
+  <a href="#template-matching-registration" class="md-nav__link">
     <span class="md-ellipsis">
-      The Problem
+      Template matching registration
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#data" class="md-nav__link">
+  <a href="#non-corresponding-feature-based-registration" class="md-nav__link">
     <span class="md-ellipsis">
-      Data
+      Non-corresponding feature-based registration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Non-corresponding feature-based registration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#edge-point-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Edge point detection
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#applications" class="md-nav__link">
-    <span class="md-ellipsis">
-      Applications
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#challenges" class="md-nav__link">
+  <a href="#corner-point-detection" class="md-nav__link">
     <span class="md-ellipsis">
-      Challenges
+      Corner point detection
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Corner point detection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#harris-corner-detector" class="md-nav__link">
+    <span class="md-ellipsis">
+      Harris corner detector
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#how-do-we-approach-problems" class="md-nav__link">
+  <a href="#mutual-information-based-registration" class="md-nav__link">
     <span class="md-ellipsis">
-      How do we approach problems?
+      Mutual information-based registration
     </span>
   </a>
   
@@ -673,50 +713,98 @@
 
 
 
-<h1 id="surgical-data-science">Surgical Data Science</h1>
-<blockquote>
-<p><em>Surgical data science aims to improve the quality of interventional healthcare and its value though capturing, organization, analysis, and modeling of data.</em></p>
-</blockquote>
-<p><strong>Surgery</strong> is any physical manipulation of a tool on a patient's body.</p>
-<h2 id="the-problem">The Problem</h2>
-<p>More knowledge to sift through <span class="arithmatex">\(\rightarrow\)</span> less feasible to translate that knowledge into actionable insights.</p>
-<p>Surgical data science can help physicians sift through data and figure out what actions to take.</p>
-<h2 id="data">Data</h2>
-<p>Many different types from before, during, and after surgery:</p>
-<ul>
-<li>Medical images</li>
-<li>Navigation data</li>
-<li>Patient status data</li>
-<li>Surgeon status data</li>
-<li>Resource utilization</li>
-<li>Medical records</li>
-<li>Expert knowledge</li>
-</ul>
-<h2 id="applications">Applications</h2>
-<ul>
-<li>Decision support</li>
-<li>Smart operating room assistant</li>
-<li>Data-Driven operating room scheduling</li>
-<li>Training</li>
-<li>Monitoring surgeon fatigue</li>
-<li>Assessing new technologies tntroduced into OR</li>
-<li>Identifying steps of the surgery that need improvement</li>
-<li>Best post-operative care plan</li>
-</ul>
-<h2 id="challenges">Challenges</h2>
+<h1 id="image-registration">Image registration</h1>
+<p>Given images <span class="arithmatex">\(A, B\)</span>, let <span class="arithmatex">\(A(x, y)\)</span> and <span class="arithmatex">\(B(x, y)\)</span> be the intensity of the pixel <span class="arithmatex">\((x, y)\)</span> in the image <span class="arithmatex">\(A\)</span> and image <span class="arithmatex">\(B\)</span>, respectively. Then the registration between <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> is defined by:</p>
 <ol>
-<li>Cost of error</li>
-<li>Accountability</li>
-<li>Heterogeneity in patients, anatomy, and disease</li>
-<li>Machine collaboration with clinicians</li>
+<li>Transformation type (rigid, similarity, warping)</li>
+<li>Measure of similarity (point-to-point distances, image similarity)</li>
+<li>Optimizer (analytic solution, ICP, gradient descent)</li>
+<li>Validation measure (TRE, similarity measure)</li>
 </ol>
-<h2 id="how-do-we-approach-problems">How do we approach problems?</h2>
-<ul>
-<li>What is going on?</li>
-<li>How well is it going?</li>
-<li>What is next?</li>
-</ul>
-<p>This approach is enabled by time series classification.</p>
+<h2 id="template-matching-registration">Template matching registration</h2>
+<ol>
+<li>Pick a random subimage from <span class="arithmatex">\(A\)</span></li>
+<li>Slide that subimage across <span class="arithmatex">\(B\)</span>. Check against every possible subimage of <span class="arithmatex">\(B\)</span></li>
+<li>Identify a match between the subimage of <span class="arithmatex">\(A\)</span> and subimage of <span class="arithmatex">\(B\)</span> with highest similarity</li>
+<li>Repeat with rotated versions of the subimage of <span class="arithmatex">\(A\)</span></li>
+<li>Centre of the subimage in <span class="arithmatex">\(A\)</span> and centre of the subimage in <span class="arithmatex">\(B\)</span> are corresponding</li>
+<li>Repeat <span class="arithmatex">\(N\)</span> times</li>
+<li>Perform fiducial registration on the corresponding points</li>
+</ol>
+<h2 id="non-corresponding-feature-based-registration">Non-corresponding feature-based registration</h2>
+<h3 id="edge-point-detection">Edge point detection</h3>
+<p>A gradient is a vector that points in the direction of the greatest rate of increase in pixel intensity. This method makes use of gradients.</p>
+<p>In this context a gradient has an <span class="arithmatex">\(x\)</span> component and a <span class="arithmatex">\(y\)</span> component. The gradient magnitude combines these components:</p>
+<div class="arithmatex">\[
+G = \sqrt{G_x^2 + G_y^2}
+\]</div>
+<p>A large gradient magnitude indicates a sharp change in intensity, likely corresponding to an edge.</p>
+<p>Sobel, Prewitt, and Roberts are all filters used to calculate the gradient components.</p>
+<p>They are small matrices that are convolved with the image to approximate derivatives (rates of change) in pixel intensity.</p>
+<p><strong>Sobel:</strong></p>
+<div class="arithmatex">\[
+G_x=\begin{bmatrix}1 &amp; 0 &amp; -1\\2 &amp; 0 &amp; -2\\1 &amp; 0 &amp; -1\end{bmatrix}
+\]</div>
+<div class="arithmatex">\[
+G_y=\begin{bmatrix}1 &amp; 2 &amp; 1\\0 &amp; 0 &amp; 0\\-1 &amp; -2 &amp; -1\end{bmatrix}
+\]</div>
+<p><strong>Prewitt:</strong></p>
+<div class="arithmatex">\[
+G_x=\begin{bmatrix}1 &amp; 0 &amp; -1\\1 &amp; 0 &amp; -1\\1 &amp; 0 &amp; -1\end{bmatrix}
+\]</div>
+<div class="arithmatex">\[
+G_y=\begin{bmatrix}1 &amp; 1 &amp; 1\\0 &amp; 0 &amp; 0\\-1 &amp; -1 &amp; -1\end{bmatrix}
+\]</div>
+<p><strong>Roberts:</strong></p>
+<div class="arithmatex">\[
+G_x=\begin{bmatrix}1 &amp; 0\\0 &amp; -1\end{bmatrix}
+\]</div>
+<div class="arithmatex">\[
+G_x=\begin{bmatrix}0 &amp; 1\\-1 &amp; 0\end{bmatrix}
+\]</div>
+<p>These are all basically checking for vertical and horizontal lines/edges.</p>
+<p>You overlay the matrix and multiply the pixel values by the matrix values, sum it all up. Do this for both the <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y\)</span> matrixes and then you have the <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y\)</span> gradients for a given subimage. Each subimage would have the dimensions of the filter you are using. Each subimage of that size would need to be checked.</p>
+<p>High gradient magnitude would indicate an edge.</p>
+<h2 id="corner-point-detection">Corner point detection</h2>
+<h3 id="harris-corner-detector">Harris corner detector</h3>
+<p>Consider a 3x3 subimage of <span class="arithmatex">\(A\)</span>. How do pixels change as we move our subimage?</p>
+<div class="arithmatex">\[
+E(\Delta x, \Delta y)=\begin{bmatrix}\Delta x\\\Delta y\end{bmatrix}^T\sum_{x, y}\begin{bmatrix}A_x(x, y)^2 &amp; A_x(x, y)A_y(x, y)\\A_x(x, y)A_y(x, y) &amp; A_y(x, y)^2\end{bmatrix}\begin{bmatrix}\Delta x\\\Delta y\end{bmatrix}
+\]</div>
+<p>This measures the change in intensity when shifting a small window (3x3 subimage) by <span class="arithmatex">\((\Delta x, \Delta y)\)</span>.</p>
+<p>We can refer to the following part of the equation as <span class="arithmatex">\(M\)</span>:</p>
+<div class="arithmatex">\[
+M = \sum_{x, y}\begin{bmatrix}A_x(x, y)^2 &amp; A_x(x, y)A_y(x, y)\\A_x(x, y)A_y(x, y) &amp; A_y(x, y)^2\end{bmatrix}
+\]</div>
+<p>Corners are detected when <span class="arithmatex">\(M\)</span> has large eignevalues <span class="arithmatex">\(\lambda_1, \lambda_2\)</span>.</p>
+<p><strong>Harris response:</strong></p>
+<div class="arithmatex">\[
+R = \lambda_1\lambda_2-k(\lambda_1+\lambda_2)^2
+\]</div>
+<p>where <span class="arithmatex">\(k\)</span> is a constant, usually <span class="arithmatex">\(k \approx 0.05\)</span>.</p>
+<p>If <span class="arithmatex">\(R &gt;\)</span> threshold then we have a corner.</p>
+<h2 id="mutual-information-based-registration">Mutual information-based registration</h2>
+<p><strong>Entropy:</strong></p>
+<div class="arithmatex">\[
+H(X) = -\sum^n_{i=1}p(x_i)\log{(p(x_i))}
+\]</div>
+<p>where <span class="arithmatex">\(X\)</span> is a random variable describing the set of possible outcomes (e.g., intensity values in an image), and <span class="arithmatex">\(p(x_i)\)</span> is the probability of outcome <span class="arithmatex">\(x_i\)</span>.</p>
+<p><span class="arithmatex">\(H(X)\)</span> measure the uncertainty or randomness in <span class="arithmatex">\(X\)</span>. It essentially quantifies how much "variability" is present in the image.</p>
+<p><strong>Joint image entropy:</strong></p>
+<div class="arithmatex">\[
+H(A, B) = -\sum_{a=0}^{255}\sum_{b=0}^{255}p(a, b)\log{(p(a, b))}
+\]</div>
+<p><strong>Mutual information:</strong></p>
+<div class="arithmatex">\[
+MI(A, B) = H(A) + H(B) - H(A, B)
+\]</div>
+<p><strong>Transformation search with mutual information:</strong></p>
+<p>We seek to find a transformation <span class="arithmatex">\(T^*\)</span> such that:</p>
+<div class="arithmatex">\[
+T^*=\argmax_T{(MI(A, T(B)))}
+\]</div>
+<p>Parameterize <span class="arithmatex">\(T\)</span>, use arbitrary optimization method.</p>
+<p>The goal is to find the optimal transformation <span class="arithmatex">\(T^*\)</span> that aligns image <span class="arithmatex">\(B\)</span> with image <span class="arithmatex">\(A\)</span> by maximizing mutual information. </p>
 
 
 
