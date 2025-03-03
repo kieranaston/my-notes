@@ -9,23 +9,23 @@
       
       
       
+        <link rel="prev" href="../fiducial-registration/">
       
-        <link rel="next" href="surgical-data-science/computer-assisted-surgery/what-is-surgical-data-science/">
       
       
-      <link rel="icon" href="img/favicon.ico">
+      <link rel="icon" href="../../../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.5">
     
     
       
-        <title>Kieran's notes</title>
+        <title>ICP registration - Kieran's notes</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.8608ea7d.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8608ea7d.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -44,7 +44,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#kierans-notes" class="md-skip">
+        <a href="#iterative-closest-point-icp-registration" class="md-skip">
           Skip to content
         </a>
       
@@ -84,9 +84,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Kieran&#39;s notes" class="md-header__button md-logo" aria-label="Kieran's notes" data-md-component="logo">
+    <a href="../../.." title="Kieran&#39;s notes" class="md-header__button md-logo" aria-label="Kieran's notes" data-md-component="logo">
       
-  <img src="img/logo.png" alt="logo">
+  <img src="../../../img/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              ICP registration
             
           </span>
         </div>
@@ -178,9 +178,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Kieran&#39;s notes" class="md-nav__button md-logo" aria-label="Kieran's notes" data-md-component="logo">
+    <a href="../../.." title="Kieran&#39;s notes" class="md-nav__button md-logo" aria-label="Kieran's notes" data-md-component="logo">
       
-  <img src="img/logo.png" alt="logo">
+  <img src="../../../img/logo.png" alt="logo">
 
     </a>
     Kieran's notes
@@ -190,6 +190,257 @@
     
       
       
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Surgical data science
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Surgical data science
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Computer-assisted surgery
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Computer-assisted surgery
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../what-is-surgical-data-science/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../computer-assisted-surgery/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Computer-assisted surgery
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transformation-representations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Transformation representations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transformations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Transformations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vectors-and-coordinates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vectors and coordinates
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pivot-calibration-and-spin-calibration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pivot calibration and spin calibration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiducial-registration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fiducial registration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
   
   
     
@@ -208,7 +459,7 @@
           
   
   <span class="md-ellipsis">
-    Home
+    ICP registration
     
   </span>
   
@@ -216,11 +467,11 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="." class="md-nav__link md-nav__link--active">
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Home
+    ICP registration
     
   </span>
   
@@ -243,19 +494,19 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#table-of-contents" class="md-nav__link">
+  <a href="#icp-registration-algorithm" class="md-nav__link">
     <span class="md-ellipsis">
-      Table of Contents
+      ICP registration algorithm
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Table of Contents">
+    <nav class="md-nav" aria-label="ICP registration algorithm">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#surgical-data-science" class="md-nav__link">
+  <a href="#im-more-detail" class="md-nav__link">
     <span class="md-ellipsis">
-      Surgical Data Science
+      Im more detail
     </span>
   </a>
   
@@ -270,253 +521,6 @@
   
 </nav>
       
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Surgical data science
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2">
-            <span class="md-nav__icon md-icon"></span>
-            Surgical data science
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
-        
-          
-          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Computer-assisted surgery
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_1">
-            <span class="md-nav__icon md-icon"></span>
-            Computer-assisted surgery
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="surgical-data-science/computer-assisted-surgery/what-is-surgical-data-science/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Overview
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="surgical-data-science/computer-assisted-surgery/computer-assisted-surgery/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Computer-assisted surgery
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="surgical-data-science/computer-assisted-surgery/transformation-representations/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Transformation representations
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="surgical-data-science/computer-assisted-surgery/transformations/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Transformations
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="surgical-data-science/computer-assisted-surgery/vectors-and-coordinates/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Vectors and coordinates
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="surgical-data-science/computer-assisted-surgery/pivot-calibration-and-spin-calibration/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Pivot calibration and spin calibration
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="surgical-data-science/computer-assisted-surgery/fiducial-registration/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Fiducial registration
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="surgical-data-science/computer-assisted-surgery/icp-registration/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    ICP registration
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -564,19 +568,19 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#table-of-contents" class="md-nav__link">
+  <a href="#icp-registration-algorithm" class="md-nav__link">
     <span class="md-ellipsis">
-      Table of Contents
+      ICP registration algorithm
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Table of Contents">
+    <nav class="md-nav" aria-label="ICP registration algorithm">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#surgical-data-science" class="md-nav__link">
+  <a href="#im-more-detail" class="md-nav__link">
     <span class="md-ellipsis">
-      Surgical Data Science
+      Im more detail
     </span>
   </a>
   
@@ -603,23 +607,41 @@
 
 
 
-<h1 id="kierans-notes">Kieran's Notes</h1>
-<p>All my notes in one place.</p>
-<h2 id="table-of-contents">Table of Contents</h2>
-<h3 id="surgical-data-science">Surgical Data Science</h3>
-<ul>
-<li>Computer-assisted surgery<ul>
-<li><a href="surgical-data-science/computer-assisted-surgery/what-is-surgical-data-science/">What is surgical data science?</a></li>
-<li><a href="surgical-data-science/computer-assisted-surgery/computer-assisted-surgery/">Computer-assisted surgery</a></li>
-<li><a href="surgical-data-science/computer-assisted-surgery/fiducial-registration/">Fiducial registration</a></li>
-<li><a href="surgical-data-science/computer-assisted-surgery/pivot-calibration-and-spin-calibration/">Pivot and spin calibration</a></li>
-<li><a href="surgical-data-science/computer-assisted-surgery/transformation-representations/">Transformation representations</a></li>
-<li><a href="surgical-data-science/computer-assisted-surgery/transformations/">Transformations</a></li>
-<li><a href="surgical-data-science/computer-assisted-surgery/vectors-and-coordinates/">Vectors and coordinates</a></li>
-<li><a href="surgical-data-science/computer-assisted-surgery/icp-registration/">ICP registration</a></li>
-</ul>
-</li>
-</ul>
+<h1 id="iterative-closest-point-icp-registration">Iterative closest point (ICP) registration</h1>
+<p>What if we do not want to use markers as we must do in fiducial registration? We can instead use two point clouds and perform ICP registration.</p>
+<p>We want to find a transformation <span class="arithmatex">\(T^{B \rightarrow A}\)</span> minimizing the following:</p>
+<div class="arithmatex">\[
+\sum_{i, j}\lvert\lvert\vec{p}_i^A-T^{B \rightarrow A}\vec{p}_j^B\rvert\rvert^2\delta_{i, j}
+\]</div>
+<div class="arithmatex">\[
+\delta_{i, j}=\begin{cases}1 \quad \text{if} \quad i,j \quad \text{correspond}\\0 \quad \text{otherwise}\end{cases}
+\]</div>
+<p>This omits points that don't have correspondence (every <span class="arithmatex">\(j\)</span> corresponds to exactly 1 <span class="arithmatex">\(i\)</span>).</p>
+<h2 id="icp-registration-algorithm">ICP registration algorithm</h2>
+<ol>
+<li>Initial estimate <span class="arithmatex">\(T_0^{B \rightarrow A}\)</span></li>
+<li>For each point <span class="arithmatex">\(\vec{p}_j^B\)</span>, compute <span class="arithmatex">\(T_i^{B \rightarrow A}\vec{p}_j^B\)</span> and find the nearest point <span class="arithmatex">\(\vec{q}_j^A\)</span></li>
+<li>Compute <span class="arithmatex">\(T_{i+1}^{B \rightarrow A}\)</span> by fiducial registration between <span class="arithmatex">\(\vec{p}_j^B\)</span> and <span class="arithmatex">\(\vec{q}_j^A\)</span></li>
+<li>Repeat until the change in fiducial registration error (FRE) falls below some threshold</li>
+</ol>
+<h3 id="im-more-detail">Im more detail</h3>
+<p><strong>Step 1:</strong> For each <span class="arithmatex">\(\vec{p}_j^B\)</span> we find <span class="arithmatex">\(\vec{q}_j^A\)</span>:</p>
+<div class="arithmatex">\[
+\lvert\lvert T_i^{B \rightarrow A}\vec{p}_j^B-\vec{q}_j^A\rvert\rvert^2 \leq \lvert\lvert T_i^{B \rightarrow A}\vec{p}_j^B-\vec{q}_k^A\rvert\rvert^2
+\]</div>
+<p>for all <span class="arithmatex">\(k\)</span>. This is simply finding the point in frame <span class="arithmatex">\(A\)</span> that is closest to the transformed point from frame <span class="arithmatex">\(B\)</span>.</p>
+<p><strong>Step 2:</strong> We do fiducial registration.</p>
+<div class="arithmatex">\[
+\vert\vert T_i^{B \rightarrow A}\vec{p}_j^B-\vec{q}_j^A\rvert\rvert^2 \leq \lvert\lvert S\vec{p}_j^B-\vec{q}_j^A\rvert\rvert^2
+\]</div>
+<p>for all <span class="arithmatex">\(S\)</span>. This finds the best possible transformation from <span class="arithmatex">\(B\)</span> to <span class="arithmatex">\(A\)</span> for the point in <span class="arithmatex">\(B\)</span> and its the point in <span class="arithmatex">\(A\)</span> that is closest to its transformed version.</p>
+<p><strong>How do we make our initial estimate?</strong></p>
+<p>There are multiple different methods for getting an initial transformation estimate when doing ICP.
+* Assume <span class="arithmatex">\(T_0^{B \rightarrow A}=I\)</span>
+* Initially do fiducial registration with known correspondence to get <span class="arithmatex">\(T_0^{B \rightarrow A}\)</span> (on small number of points), then refine with ICP
+* Could compute <span class="arithmatex">\(T_0^{B \rightarrow A}\)</span> using fiducial registration on principal component vectors
+* Could try a set of initial rotations, do ICP, and compute FRE for each, then choose the one with smallest FRE</p>
+<p>It is worth noting that this method is sensitive to the initial estimate and this can affect whether we reach a global maxima or not. </p>
 
 
 
@@ -666,10 +688,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.f1b6f286.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
       
