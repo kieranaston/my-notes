@@ -14,3 +14,4 @@ All my notes in one place.
     - [Transformation representations](surgical-data-science/computer-assisted-surgery/transformation-representations.md)
     - [Transformations](surgical-data-science/computer-assisted-surgery/transformations.md)
     - [Vectors and coordinates](surgical-data-science/computer-assisted-surgery/vectors-and-coordinates.md)
+    - [ICP registration](surgical-data-science/computer-assisted-surgery/icp-registration.md)

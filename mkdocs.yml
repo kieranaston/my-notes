@@ -19,6 +19,7 @@ nav:
           - Vectors and coordinates: surgical-data-science/computer-assisted-surgery/vectors-and-coordinates.md
           - Pivot calibration and spin calibration: surgical-data-science/computer-assisted-surgery/pivot-calibration-and-spin-calibration.md
           - Fiducial registration: surgical-data-science/computer-assisted-surgery/fiducial-registration.md
+          - ICP registration: surgical-data-science/computer-assisted-surgery/icp-registration.md
 
 markdown_extensions:
   - pymdownx.arithmatex:
