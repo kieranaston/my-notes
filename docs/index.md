@@ -16,3 +16,4 @@ All my notes in one place.
     - [Vectors and coordinates](surgical-data-science/computer-assisted-surgery/vectors-and-coordinates.md)
     - [ICP registration](surgical-data-science/computer-assisted-surgery/icp-registration.md)
     - [Image registration](surgical-data-science/computer-assisted-surgery/image-registration.md)
+    - [Medical image segmentation](surgical-data-science/computer-assisted-surgery/medical-image-segmentation.md)

@@ -130,9 +130,9 @@ $$
 We seek to find a transformation $T^*$ such that:
 
 $$
-T^*=\argmax_T{(MI(A, T(B)))}
+T^*= \arg \max_T {(MI(A, T(B)))}
 $$
 
 Parameterize $T$, use arbitrary optimization method.
 
-The goal is to find the optimal transformation $T^*$ that aligns image $B$ with image $A$ by maximizing mutual information. 
+The goal is to find the optimal transformation $T^*$ that aligns image $B$ with image $A$ by maximizing mutual information.
