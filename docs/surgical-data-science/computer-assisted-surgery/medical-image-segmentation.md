@@ -134,19 +134,29 @@ $$
 
 This is a generative model for the structure, where we can generate variations of the shape by choosing different $\vec{b}$.
 
-Alternatively, given a known $\vec{x}$, one could compute the linear combination of principal components that best first $\vec{x}$ with the following expressions:
+Alternatively, given a known $\vec{x}$, one could compute the linear combination of principal components that best fits $\vec{x}$ with the following expressions:
 
 $$
 \vec{b}=P^T(\vec{x}-x)
 $$
 
-So the technique boils down to:
+## Active shape model algorithm
 
-1. Start with a set of images where the segmentation of the target structure is known
-2. For each of those images extract the boundary points
-3. Align all the images to a common coordinate frame with ICP
-4. Make sure all boundary points from different images correspond to the same anatomical locations
-5. For each image, represent the boundary points as a vector
-6. Perform PCA on the set of vectors to model the distribution of shapes
-7. Use the mean shape and principal components to approximate any shape
-8. Given a new shape, we can compute the weights that best approximate it
+0. Initial approximate fit of SSM to image
+1. Find nearby targey points for points on the SSM's boundary. Search perpendicular to boundary point; identifying point with maximum gradient
+2. Fit SSM to target points
+3. Repeat until convergence
+
+How do we find initial guess?
+
+* Manually
+* Try a bunch, and keep result with best error
+* Edge image and register with mean shape
+
+**Simple description of the algorithm:**
+
+* Place the mean shape (average shape from SSM) near the object we want to segment
+* This is the initial guess
+* For each point on the SSM's boundary, search perpendicular to the boundary. We are looking for the point with the strongest gradient, e.g., the edge. This is the target point
+* Adjust the SSM to move the boundary closer to the target points
+* Repeat until the SSM stops changing significantly

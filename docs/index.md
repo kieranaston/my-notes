@@ -17,3 +17,5 @@ All my notes in one place.
     - [ICP registration](surgical-data-science/computer-assisted-surgery/icp-registration.md)
     - [Image registration](surgical-data-science/computer-assisted-surgery/image-registration.md)
     - [Medical image segmentation](surgical-data-science/computer-assisted-surgery/medical-image-segmentation.md)
+- Machine learning on time series
+    - [Time series](surgical-data-science/machine-learning-on-time-series/time-series.md)
