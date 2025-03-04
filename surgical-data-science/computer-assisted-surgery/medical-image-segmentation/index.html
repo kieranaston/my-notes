@@ -12,6 +12,8 @@
         <link rel="prev" href="../image-registration/">
       
       
+        <link rel="next" href="../../machine-learning-on-time-series/time-series/">
+      
       
       <link rel="icon" href="../../../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.5">
@@ -564,10 +566,85 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#active-shape-model-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Active shape model algorithm
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Machine learning on time series
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Machine learning on time series
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../machine-learning-on-time-series/time-series/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Time series
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -636,6 +713,15 @@
   <a href="#statistical-shape-models" class="md-nav__link">
     <span class="md-ellipsis">
       Statistical shape models
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#active-shape-model-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Active shape model algorithm
     </span>
   </a>
   
@@ -744,21 +830,31 @@ $</p>
 \vec{x}=x+P\vec{b}
 \]</div>
 <p>This is a generative model for the structure, where we can generate variations of the shape by choosing different <span class="arithmatex">\(\vec{b}\)</span>.</p>
-<p>Alternatively, given a known <span class="arithmatex">\(\vec{x}\)</span>, one could compute the linear combination of principal components that best first <span class="arithmatex">\(\vec{x}\)</span> with the following expressions:</p>
+<p>Alternatively, given a known <span class="arithmatex">\(\vec{x}\)</span>, one could compute the linear combination of principal components that best fits <span class="arithmatex">\(\vec{x}\)</span> with the following expressions:</p>
 <div class="arithmatex">\[
 \vec{b}=P^T(\vec{x}-x)
 \]</div>
-<p>So the technique boils down to:</p>
+<h2 id="active-shape-model-algorithm">Active shape model algorithm</h2>
 <ol>
-<li>Start with a set of images where the segmentation of the target structure is known</li>
-<li>For each of those images extract the boundary points</li>
-<li>Align all the images to a common coordinate frame with ICP</li>
-<li>Make sure all boundary points from different images correspond to the same anatomical locations</li>
-<li>For each image, represent the boundary points as a vector</li>
-<li>Perform PCA on the set of vectors to model the distribution of shapes</li>
-<li>Use the mean shape and principal components to approximate any shape</li>
-<li>Given a new shape, we can compute the weights that best approximate it</li>
+<li>Initial approximate fit of SSM to image</li>
+<li>Find nearby targey points for points on the SSM's boundary. Search perpendicular to boundary point; identifying point with maximum gradient</li>
+<li>Fit SSM to target points</li>
+<li>Repeat until convergence</li>
 </ol>
+<p>How do we find initial guess?</p>
+<ul>
+<li>Manually</li>
+<li>Try a bunch, and keep result with best error</li>
+<li>Edge image and register with mean shape</li>
+</ul>
+<p><strong>Simple description of the algorithm:</strong></p>
+<ul>
+<li>Place the mean shape (average shape from SSM) near the object we want to segment</li>
+<li>This is the initial guess</li>
+<li>For each point on the SSM's boundary, search perpendicular to the boundary. We are looking for the point with the strongest gradient, e.g., the edge. This is the target point</li>
+<li>Adjust the SSM to move the boundary closer to the target points</li>
+<li>Repeat until the SSM stops changing significantly</li>
+</ul>
 
 
 
