@@ -10,20 +10,34 @@ theme:
 
 nav:
   - Home: index.md
-  - Surgical data science:
-      - Computer-assisted surgery:
-          - Overview: surgical-data-science/computer-assisted-surgery/what-is-surgical-data-science.md
-          - Computer-assisted surgery: surgical-data-science/computer-assisted-surgery/computer-assisted-surgery.md
-          - Transformation representations: surgical-data-science/computer-assisted-surgery/transformation-representations.md
-          - Transformations: surgical-data-science/computer-assisted-surgery/transformations.md
-          - Vectors and coordinates: surgical-data-science/computer-assisted-surgery/vectors-and-coordinates.md
-          - Pivot calibration and spin calibration: surgical-data-science/computer-assisted-surgery/pivot-calibration-and-spin-calibration.md
-          - Fiducial registration: surgical-data-science/computer-assisted-surgery/fiducial-registration.md
-          - ICP registration: surgical-data-science/computer-assisted-surgery/icp-registration.md
-          - Image registration: surgical-data-science/computer-assisted-surgery/image-registration.md
-          - Medical image segmentation: surgical-data-science/computer-assisted-surgery/medical-image-segmentation.md
-      - Machine learning on time series:
-          - Time series: surgical-data-science/machine-learning-on-time-series/time-series.md
+#  - Surgical data science:
+#      - Computer-assisted surgery:
+#          - Overview: surgical-data-science/computer-assisted-surgery/what-is-surgical-data-science.md
+#          - Computer-assisted surgery: surgical-data-science/computer-assisted-surgery/computer-assisted-surgery.md
+#          - Transformation representations: surgical-data-science/computer-assisted-surgery/transformation-representations.md
+#          - Transformations: surgical-data-science/computer-assisted-surgery/transformations.md
+#          - Vectors and coordinates: surgical-data-science/computer-assisted-surgery/vectors-and-coordinates.md
+#          - Pivot calibration and spin calibration: surgical-data-science/computer-assisted-surgery/pivot-calibration-and-spin-calibration.md
+#          - Fiducial registration: surgical-data-science/computer-assisted-surgery/fiducial-registration.md
+#          - ICP registration: surgical-data-science/computer-assisted-surgery/icp-registration.md
+#          - Image registration: surgical-data-science/computer-assisted-surgery/image-registration.md
+#          - Medical image segmentation: surgical-data-science/computer-assisted-surgery/medical-image-segmentation.md
+#      - Machine learning on time series:
+#          - Time series: surgical-data-science/machine-learning-on-time-series/time-series.md
+#          - Rotation averaging: surgical-data-science/machine-learning-on-time-series/rotation-averaging.md
+  - Programming languages:
+      - C++:
+          - Introductory notes: programming-languages/cpp/getting-started-with-cpp.md
+  - Comptia Network+ course:
+      - Networking concepts:
+          - The OSI model:
+              - Understanding the OSI model: comptia-networkplus-course/networking-concepts/the-osi-model/osi-model.md
+          - Network appliances and applications:
+              - Networking devices: comptia-networkplus-course/networking-concepts/network-appliances-applications/networking-devices.md
+              - Networking functions: comptia-networkplus-course/networking-concepts/network-appliances-applications/networking-functions.md
+          - The cloud:
+              - Designing the cloud: comptia-networkplus-course/networking-concepts/the-cloud/designing-the-cloud.md
+
 
 markdown_extensions:
   - pymdownx.arithmatex:
