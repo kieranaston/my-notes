@@ -9,6 +9,8 @@
       
       
       
+        <link rel="prev" href="../file-commands/">
+      
       
       
       <link rel="icon" href="../../../img/favicon.ico">
@@ -51,7 +53,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="light-blue">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="blue">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -205,17 +207,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -230,7 +234,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Linux essentials
@@ -241,17 +245,19 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
         
           
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
@@ -266,7 +272,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             Linux command line
@@ -339,6 +345,105 @@
 
               
             
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Text and grep commands
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Text and grep commands
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#filterstext-processors-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filters/text processors commands
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grep-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      grep usage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wc-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      wc usage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#awk-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      awk usage
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -398,6 +503,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#wc-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      wc usage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#awk-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      awk usage
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -435,7 +558,17 @@
 <code>grep -v keyword file</code> get everything <strong>but</strong> the search keyword
 <code>grep keyword file | awk '(print $1)'</code> gives only first columns of the lines returned
 <code>ls -l | grep Desktop</code> only pull results that include "Desktop"
-<code>egrep -i "keyword|keyword2" file</code> gives all lines matching either of the keywordsx </p>
+<code>egrep -i "keyword|keyword2" file</code> gives all lines matching either of the keywordsx</p>
+<h2 id="wc-usage"><code>wc</code> usage</h2>
+<p>Reads either standard input or list of files and generates: newline count, word count, byte count.</p>
+<p><code>wc file</code> checks file line count, word count, byte count
+<code>wc -l file</code> gets number of lines in a file
+<code>wc -w file</code> gets number of words in a file
+<code>wc -b file</code> gets number of bytes in a file</p>
+<p><code>ls -l | wc -l</code> gives the number of files/directories you have within a location (plus 1 extra line counted)</p>
+<h2 id="awk-usage"><code>awk</code> usage</h2>
+<p>Most of the time <code>awk</code> is used to extract fields from a file or from an output.</p>
+<p><strong>Source:</strong> <a href="https://alison.com/topic/learn/118895/text-and-grep-commands">Linux for Absolute Beginners: Text and Grep Commands</a> by Imran Afzal, Allison.</p>
 
 
 
