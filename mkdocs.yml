@@ -8,7 +8,7 @@ theme:
   palette:
     scheme: slate
     primary: black
-    accent: light blue
+    accent: blue
   features:
     - navigation.instant
 
@@ -19,6 +19,7 @@ nav:
           - Commands and permissions: linux-essentials/linux-command-line/commands-and-permissions.md
           - Help commands and pipes: linux-essentials/linux-command-line/help-commands-and-pipes.md
           - File commands and filters: linux-essentials/linux-command-line/file-commands.md
+          - Text and grep commands: linux-essentials/linux-command-line/text-and-grep-commands.md
 
 markdown_extensions:
   - pymdownx.arithmatex:

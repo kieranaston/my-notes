@@ -89,3 +89,5 @@ First bit indicates a file, next three bits are user permissions, then next thre
 The `-R` option changes ownership recursively (everything within will also have ownership changed).
 
 **Note**: If a file you do not have ownership of is within a directory that you have permissions for, you can still delete/make changes to it. For this reason is it often important to perform recursive ownership changes to ensure they are properly applied for your case.
+
+**Source:** [Linux for Absolute Beginners: Commands and Permissions](https://alison.com/topic/learn/118892/commands-and-permissions) by Imran Afzal, Allison.

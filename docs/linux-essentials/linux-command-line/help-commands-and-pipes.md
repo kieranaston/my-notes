@@ -40,3 +40,5 @@ command1 [arguments] | command2 [arguments]
 Doing it with `>` will overwrite contents. `>>` will add to the existing contents.
 
 Can also send the output of a command to a file this way.
+
+**Source:** [Linux for Absolute Beginners: Help Command and Pipes](https://alison.com/topic/learn/118893/help-command-and-pipes) by Imran Afzal, Allison.

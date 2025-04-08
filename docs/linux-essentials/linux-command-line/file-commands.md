@@ -17,3 +17,5 @@
 * `rmdir` or `rm -r` removes directory
 * `chgrp` changes group ownership
 * `chown` changes ownership
+
+**Source:** [Linux for Absolute Beginners: File Commands and Filters](https://alison.com/topic/learn/118894/file-commands-and-filters) by Imran Afzal, Allison.
