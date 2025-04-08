@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../what-is-surgical-data-science/">
+        <link rel="prev" href="../commands-and-permissions/">
       
       
-        <link rel="next" href="../transformation-representations/">
+        <link rel="next" href="../file-commands/">
       
       
       <link rel="icon" href="../../../img/favicon.ico">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Computer-assisted surgery - Kieran's notes</title>
+        <title>Help commands and pipes - Kieran's notes</title>
       
     
     
@@ -37,12 +37,6 @@
       
     
     
-      
-        
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
@@ -61,7 +55,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="brown" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="light-blue">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -70,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#computer-assisted-surgery" class="md-skip">
+        <a href="#help-commands-and-pipes" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Computer-assisted surgery
+              Help commands and pipes
             
           </span>
         </div>
@@ -234,7 +228,7 @@
             
   
   <span class="md-ellipsis">
-    Surgical data science
+    Linux essentials
     
   </span>
   
@@ -245,7 +239,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            Surgical data science
+            Linux essentials
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -272,7 +266,7 @@
             
   
   <span class="md-ellipsis">
-    Computer-assisted surgery
+    Linux command line
     
   </span>
   
@@ -283,7 +277,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
-            Computer-assisted surgery
+            Linux command line
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -294,11 +288,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../what-is-surgical-data-science/" class="md-nav__link">
+      <a href="../commands-and-permissions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Overview
+    Commands and permissions
     
   </span>
   
@@ -329,7 +323,7 @@
           
   
   <span class="md-ellipsis">
-    Computer-assisted surgery
+    Help commands and pipes
     
   </span>
   
@@ -341,7 +335,7 @@
         
   
   <span class="md-ellipsis">
-    Computer-assisted surgery
+    Help commands and pipes
     
   </span>
   
@@ -364,27 +358,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-we-approach-an-operation" class="md-nav__link">
+  <a href="#help-commands" class="md-nav__link">
     <span class="md-ellipsis">
-      How we approach an operation
+      Help commands
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#system-design" class="md-nav__link">
+  <a href="#tab-and-up-arrow" class="md-nav__link">
     <span class="md-ellipsis">
-      System design
+      Tab and up arrow
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#challenges" class="md-nav__link">
+  <a href="#pipes" class="md-nav__link">
     <span class="md-ellipsis">
-      Challenges
+      Pipes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-text-to-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding text to files
     </span>
   </a>
   
@@ -406,231 +409,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../transformation-representations/" class="md-nav__link">
+      <a href="../file-commands/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Transformation representations
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../transformations/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Transformations
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../vectors-and-coordinates/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Vectors and coordinates
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../pivot-calibration-and-spin-calibration/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Pivot calibration and spin calibration
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../fiducial-registration/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Fiducial registration
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../icp-registration/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    ICP registration
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../image-registration/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Image registration
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../medical-image-segmentation/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Medical image segmentation
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Machine learning on time series
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_2">
-            <span class="md-nav__icon md-icon"></span>
-            Machine learning on time series
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../machine-learning-on-time-series/time-series/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Time series
+    File commands and filters
     
   </span>
   
@@ -683,27 +466,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-we-approach-an-operation" class="md-nav__link">
+  <a href="#help-commands" class="md-nav__link">
     <span class="md-ellipsis">
-      How we approach an operation
+      Help commands
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#system-design" class="md-nav__link">
+  <a href="#tab-and-up-arrow" class="md-nav__link">
     <span class="md-ellipsis">
-      System design
+      Tab and up arrow
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#challenges" class="md-nav__link">
+  <a href="#pipes" class="md-nav__link">
     <span class="md-ellipsis">
-      Challenges
+      Pipes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-text-to-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding text to files
     </span>
   </a>
   
@@ -725,19 +517,35 @@
 
 
 
-<h1 id="computer-assisted-surgery">Computer-assisted Surgery</h1>
-<p><strong>Image-guided surgery</strong> is using visualizations that are images to help a surgeon perform a surgery.</p>
-<p><strong>Computer-assisted surgery</strong> is using technology somehow to improve the execution of surgery.</p>
-<h2 id="how-we-approach-an-operation">How we approach an operation</h2>
-<p>In each phase of an operation, i.e., pre-operative, intra-operative, and post-operative we have a workflow utilizing imaging, our patient-specific model, and out computer-assisted plan.</p>
-<p>All aspects are working dynamically and changing each other.</p>
-<p>At the end we put everything into a database.</p>
-<h2 id="system-design">System design</h2>
-<p>When desiging systems we have to consider that there are loads of different brands of equipment and software.</p>
-<p>When designing a system it is complete with navigation software, hardware interface, and hardware.</p>
-<h2 id="challenges">Challenges</h2>
-<p>Image segmentation, i.e., determining the meaningful sections of an image.</p>
-<p>Spatial registration, i.e., determining the transformation between two coordinate frames (or images).</p>
+<h1 id="help-commands-and-pipes">Help commands and pipes</h1>
+<h2 id="help-commands">Help commands</h2>
+<p>3 types of help commands:</p>
+<ul>
+<li><code>whatis command</code></li>
+<li>Gives shorter version of command info</li>
+<li><code>command --help</code></li>
+<li>Longer version of help for command</li>
+<li><code>man command</code></li>
+<li>Full info for command</li>
+</ul>
+<h2 id="tab-and-up-arrow">Tab and up arrow</h2>
+<p>Tab completes available commands, files, or directories.</p>
+<p>Up arrow gives the last executed command.</p>
+<h2 id="pipes">Pipes</h2>
+<p>Pipes are used to connect the output of one command to the input of another command.</p>
+<p>The symbol for a pipe is <code>|</code>. Syntax for using pipes is:</p>
+<div class="highlight"><pre><span></span><code>command1 [arguments] | command2 [arguments]
+</code></pre></div>
+<h2 id="adding-text-to-files">Adding text to files</h2>
+<p>3 simple ways:</p>
+<ul>
+<li><code>vi</code> editor</li>
+<li>Redirect command output <code>&gt;</code> or <code>&gt;&gt;</code></li>
+<li><code>echo &gt;</code> or <code>&gt;&gt;</code></li>
+</ul>
+<p><strong>Example using redirect</strong>: <code>echo "Jerry is the main character in Seinfeld" &gt; jerry</code> populates file <code>jerry</code> with that text.</p>
+<p>Doing it with <code>&gt;</code> will overwrite contents. <code>&gt;&gt;</code> will add to the existing contents.</p>
+<p>Can also send the output of a command to a file this way.</p>
 
 
 
@@ -784,7 +592,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
