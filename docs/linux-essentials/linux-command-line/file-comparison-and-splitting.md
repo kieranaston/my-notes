@@ -20,4 +20,26 @@ Can be used to cut parts1 of a line by a delimiter, byte position, and character
 `diff` compares line by line
 `cmp` compares byte by byte
 
+## Comtining and plitting files
+
+Multiple files can be combined into one, and one file can be split into multiple files.
+
+In times when we have huge files, there are times when we need to either split them or compress them to send them places.
+
+`split -l 2 countries sep` splits the file countries into files with name `sep` containing 2 lines each from original countries file
+
+## Linux vs. Windows commands
+
+Listing of a directory: `dir` vs `ls -l`
+Rename a file: `ren` vs `mv`
+Copy a file: `copy` vs `cp`
+Move file: `move` vs `mv`
+Clear screen: `cls` vs `clear`
+Delete file: `del` vs `rm`
+Compare contents of files: `fc` vs `diff`
+Search for a word/string in a file: `find` vs `grep`
+Display command help: `command /?` vs `man command`
+Displays your location in the file system: `chdir` vs `pwd`
+Displays the time: `time` vs `date`
+
 **Source:** [Linux for Absolute Beginners: File Comparison and Splitting](https://alison.com/topic/learn/118896/file-comparison-and-splitting) by Imran Afzal, Allison.
