@@ -68,6 +68,74 @@ Additionally, `frequent_words` must call `pattern_count` $|Text| - k + 1$ times 
 
 To simplify, its complexity is $\mathcal{O}(|Text|^2\cdot k)$.
 
+## Another way of doing this
+
+With the goal of making our algorithm more efficient, we can address the main issue: we look through the entire string for every different $k$-mer pattern. Our new idea is to pass through the string once for each $k$, maintaining a count of each possible $k$-mer and adding to each $k$-mer's count whenever we pass over it. Since these strings are made up of four different possible characters, we will have $4^k$ possible $k$-mers for each value of $k$.
+
+We define the frequency array of a string $Text$ as an array of length $4^k$, where the $i$-th element of the array holds the number of times that the $i$-th $k$-mer (in the lexographic order) appears in $Text$.
+
+To make this work we need to be able to transform strings to integers and back to strings. We can figure out the possible $k$-mers, order them lexographically, then number them based on that ordering. Based on that numbering we can encode our string as an integer, where each $k$-mer is described by its number in the lexographic ordering.
+
+The following algorithms are for encoding and decoding out representations:
+
+**Encoding**:
+
+```python
+def pattern_to_number(pattern):
+    if not pattern:
+        return 0
+    symbol_to_number = {'A': 0, 'C': 1, 'G': 2, 'T': 3}
+    result = 0
+    for char in pattern:
+        result = result * 4 + symbol_to_number[char]
+    return result
+```
+
+**Decoding**:
+
+```python
+def number_to_pattern(index, k):
+    if k == 0:
+        return ""
+    number_to_symbol = {0: 'A', 1: 'C', 2: 'G', 3: 'T'}
+    prefix_index = index // 4
+    remainder = index % 4
+    symbol = number_to_symbol[remainder]
+    if k == 1:
+        return symbol
+    else:
+        prefix_pattern = number_to_pattern(prefix_index, k-1)
+        return prefix_pattern + symbol
+```
+
+We can now move on to the problem of generating frequency arrays. We can first initialize every $4^k$ elements in the frequency array to zero, then make a single pass down the string. For each $k$-mer we encounter, we add 1 to the value of the frequency array corresponding to it.
+
+If working in Python we can use a dict for our frequency array:
+
+```python
+def frequency_array(k):
+    frequencies = {}
+    for i in range(0, (4**k)):
+        frequencies[number_to_pattern(i, k)] = 0
+    return frequencies
+```
+
+This uses our previously built `number_to_pattern` function to populate our dictionary with keys corresponding to each possible $k$-mer, in lexicographical order.
+
+We can now put it all together with a complete algorithm that is faster than our original solution:
+
+```python
+def faster_frequent_words(text, k):
+    frequencies = frequency_array(k)
+    for i in range(len(text) - k + 1):
+        frequencies[text[i:i+k]] += 1
+    max_value = max(frequencies.values())
+    print(frequencies)
+    return [key for key, value in frequencies.items() if value == max_value]
+```
+
+This algorithm initializes a dict of all possible $k$-mers. It then iterates through $Text$ and adds each $k$-mer occurrence to the frequency dict. We then get the maximum value of the frequency dict, and iterate through the frequency dict to check for strings that match that maximum value. Strings that have occurrences equal to the max are returned. 
+
 ## References
 
 Compeau, P., & Pevzner, P. (2015). *Bioinformatics algorithms: An active learning approach* (Vol. 1). Active Learning Publishers.
