@@ -577,6 +577,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#another-way-of-doing-this" class="md-nav__link">
+    <span class="md-ellipsis">
+      Another way of doing this
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     <span class="md-ellipsis">
       References
@@ -640,6 +649,15 @@
   <a href="#the-frequent-words-problem" class="md-nav__link">
     <span class="md-ellipsis">
       The Frequent Words problem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#another-way-of-doing-this" class="md-nav__link">
+    <span class="md-ellipsis">
+      Another way of doing this
     </span>
   </a>
   
@@ -714,6 +732,54 @@
 <p>Each <span class="arithmatex">\(k\)</span>-mer requires <span class="arithmatex">\(|Text| - k + 1\)</span> checks, each requiring as many as <span class="arithmatex">\(k\)</span> comparisons, so overall # of steps of <code>pattern_count(text, pattern)</code> is <span class="arithmatex">\((|Text| - k + 1) \cdot k\)</span>.</p>
 <p>Additionally, <code>frequent_words</code> must call <code>pattern_count</code> <span class="arithmatex">\(|Text| - k + 1\)</span> times (once for each <span class="arithmatex">\(k\)</span>-mer of <span class="arithmatex">\(Text\)</span>), so its overall number of steps is <span class="arithmatex">\((|Text| - k + 1) \cdot (|Text| - k + 1) \cdot k\)</span>.</p>
 <p>To simplify, its complexity is <span class="arithmatex">\(\mathcal{O}(|Text|^2\cdot k)\)</span>.</p>
+<h2 id="another-way-of-doing-this">Another way of doing this</h2>
+<p>With the goal of making our algorithm more efficient, we can address the main issue: we look through the entire string for every different <span class="arithmatex">\(k\)</span>-mer pattern. Our new idea is to pass through the string once for each <span class="arithmatex">\(k\)</span>, maintaining a count of each possible <span class="arithmatex">\(k\)</span>-mer and adding to each <span class="arithmatex">\(k\)</span>-mer's count whenever we pass over it. Since these strings are made up of four different possible characters, we will have <span class="arithmatex">\(4^k\)</span> possible <span class="arithmatex">\(k\)</span>-mers for each value of <span class="arithmatex">\(k\)</span>.</p>
+<p>We define the frequency array of a string <span class="arithmatex">\(Text\)</span> as an array of length <span class="arithmatex">\(4^k\)</span>, where the <span class="arithmatex">\(i\)</span>-th element of the array holds the number of times that the <span class="arithmatex">\(i\)</span>-th <span class="arithmatex">\(k\)</span>-mer (in the lexographic order) appears in <span class="arithmatex">\(Text\)</span>.</p>
+<p>To make this work we need to be able to transform strings to integers and back to strings. We can figure out the possible <span class="arithmatex">\(k\)</span>-mers, order them lexographically, then number them based on that ordering. Based on that numbering we can encode our string as an integer, where each <span class="arithmatex">\(k\)</span>-mer is described by its number in the lexographic ordering.</p>
+<p>The following algorithms are for encoding and decoding out representations:</p>
+<p><strong>Encoding</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">pattern_to_number</span><span class="p">(</span><span class="n">pattern</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">pattern</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="n">symbol_to_number</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;T&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">pattern</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">result</span> <span class="o">*</span> <span class="mi">4</span> <span class="o">+</span> <span class="n">symbol_to_number</span><span class="p">[</span><span class="n">char</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">result</span>
+</code></pre></div>
+<p><strong>Decoding</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">number_to_pattern</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">k</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">number_to_symbol</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="s1">&#39;T&#39;</span><span class="p">}</span>
+    <span class="n">prefix_index</span> <span class="o">=</span> <span class="n">index</span> <span class="o">//</span> <span class="mi">4</span>
+    <span class="n">remainder</span> <span class="o">=</span> <span class="n">index</span> <span class="o">%</span> <span class="mi">4</span>
+    <span class="n">symbol</span> <span class="o">=</span> <span class="n">number_to_symbol</span><span class="p">[</span><span class="n">remainder</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">k</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">symbol</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">prefix_pattern</span> <span class="o">=</span> <span class="n">number_to_pattern</span><span class="p">(</span><span class="n">prefix_index</span><span class="p">,</span> <span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">prefix_pattern</span> <span class="o">+</span> <span class="n">symbol</span>
+</code></pre></div>
+<p>We can now move on to the problem of generating frequency arrays. We can first initialize every <span class="arithmatex">\(4^k\)</span> elements in the frequency array to zero, then make a single pass down the string. For each <span class="arithmatex">\(k\)</span>-mer we encounter, we add 1 to the value of the frequency array corresponding to it.</p>
+<p>If working in Python we can use a dict for our frequency array:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">frequency_array</span><span class="p">(</span><span class="n">k</span><span class="p">):</span>
+    <span class="n">frequencies</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">(</span><span class="mi">4</span><span class="o">**</span><span class="n">k</span><span class="p">)):</span>
+        <span class="n">frequencies</span><span class="p">[</span><span class="n">number_to_pattern</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">k</span><span class="p">)]</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">return</span> <span class="n">frequencies</span>
+</code></pre></div>
+<p>This uses our previously built <code>number_to_pattern</code> function to populate our dictionary with keys corresponding to each possible <span class="arithmatex">\(k\)</span>-mer, in lexicographical order.</p>
+<p>We can now put it all together with a complete algorithm that is faster than our original solution:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">faster_frequent_words</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+    <span class="n">frequencies</span> <span class="o">=</span> <span class="n">frequency_array</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="o">-</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">frequencies</span><span class="p">[</span><span class="n">text</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="n">k</span><span class="p">]]</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">max_value</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">frequencies</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">frequencies</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">key</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">frequencies</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">value</span> <span class="o">==</span> <span class="n">max_value</span><span class="p">]</span>
+</code></pre></div>
+<p>This algorithm initializes a dict of all possible <span class="arithmatex">\(k\)</span>-mers. It then iterates through <span class="arithmatex">\(Text\)</span> and adds each <span class="arithmatex">\(k\)</span>-mer occurrence to the frequency dict. We then get the maximum value of the frequency dict, and iterate through the frequency dict to check for strings that match that maximum value. Strings that have occurrences equal to the max are returned. </p>
 <h2 id="references">References</h2>
 <p>Compeau, P., &amp; Pevzner, P. (2015). <em>Bioinformatics algorithms: An active learning approach</em> (Vol. 1). Active Learning Publishers.</p>
 
