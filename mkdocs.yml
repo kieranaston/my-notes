@@ -25,6 +25,11 @@ nav:
           - Utility commands and user management: linux-essentials/linux-administration/utility-commands-user-management.md
   - Bioinformatics algorithms:
       - Where in the genome does DNA replication begin?: bioinformatics-algorithms/where-in-genome-does-dna-replication-begin.md
+  - AWS Cloud Practitioner Essentials:
+      - Introduction to Amazon Web Services (AWS): aws-cloud-practitioner-essentials/intro-to-aws.md
+      - Compute in the cloud: aws-cloud-practitioner-essentials/compute-in-the-cloud.md
+      - Global infrastructure and reliability: aws-cloud-practitioner-essentials/global-infrastructure-and-reliability.md
+      - Networking: aws-cloud-practitioner-essentials/networking.md
 
 markdown_extensions:
   - pymdownx.arithmatex:
