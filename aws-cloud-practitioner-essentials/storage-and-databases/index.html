@@ -9,10 +9,8 @@
       
       
       
-        <link rel="prev" href="../intro-to-aws/">
+        <link rel="prev" href="../networking/">
       
-      
-        <link rel="next" href="../global-infrastructure-and-reliability/">
       
       
       <link rel="icon" href="../../img/favicon.ico">
@@ -20,7 +18,7 @@
     
     
       
-        <title>Compute in the cloud - Kieran's notes</title>
+        <title>Storage and databases - Kieran's notes</title>
       
     
     
@@ -64,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#compute-in-the-cloud" class="md-skip">
+        <a href="#storage-and-databases" class="md-skip">
           Skip to content
         </a>
       
@@ -99,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Compute in the cloud
+              Storage and databases
             
           </span>
         </div>
@@ -597,31 +595,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Compute in the cloud
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../compute-in-the-cloud/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -631,299 +608,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#amazon-ec2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Amazon EC2
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#aws-instance-types" class="md-nav__link">
-    <span class="md-ellipsis">
-      AWS instance types
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="AWS instance types">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#general-purpose" class="md-nav__link">
-    <span class="md-ellipsis">
-      General purpose
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#compute-optimized" class="md-nav__link">
-    <span class="md-ellipsis">
-      Compute optimized
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#memory-optimized" class="md-nav__link">
-    <span class="md-ellipsis">
-      Memory optimized
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#accelerated-computing" class="md-nav__link">
-    <span class="md-ellipsis">
-      Accelerated computing
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#storage-optimized" class="md-nav__link">
-    <span class="md-ellipsis">
-      Storage optimized
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ec2-pricing" class="md-nav__link">
-    <span class="md-ellipsis">
-      EC2 pricing
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="EC2 pricing">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#on-demand" class="md-nav__link">
-    <span class="md-ellipsis">
-      On-demand
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#savings-plans" class="md-nav__link">
-    <span class="md-ellipsis">
-      Savings plans
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reserved-instances" class="md-nav__link">
-    <span class="md-ellipsis">
-      Reserved instances
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#spot-instances" class="md-nav__link">
-    <span class="md-ellipsis">
-      Spot instances
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dedicated-hosts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dedicated hosts
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#scaling-amazon-ec2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Scaling Amazon EC2
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Scaling Amazon EC2">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#auto-scaling" class="md-nav__link">
-    <span class="md-ellipsis">
-      Auto scaling
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#elastic-load-balancing" class="md-nav__link">
-    <span class="md-ellipsis">
-      Elastic load balancing
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#messaging-and-queueing" class="md-nav__link">
-    <span class="md-ellipsis">
-      Messaging and queueing
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Messaging and queueing">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#tightly-coupled-architecture" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tightly-coupled architecture
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#loosely-coupled-architecture" class="md-nav__link">
-    <span class="md-ellipsis">
-      Loosely coupled architecture
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#amazon-sqs-amazon-simple-queue-service" class="md-nav__link">
-    <span class="md-ellipsis">
-      Amazon SQS (Amazon Simple Queue Service)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#amazon-sns-amazon-simple-notification-service" class="md-nav__link">
-    <span class="md-ellipsis">
-      Amazon SNS (Amazon Simple Notification Service)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#additional-compute-services" class="md-nav__link">
-    <span class="md-ellipsis">
-      Additional compute services
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Additional compute services">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#serverless-computing" class="md-nav__link">
-    <span class="md-ellipsis">
-      Serverless computing
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#aws-lambda" class="md-nav__link">
-    <span class="md-ellipsis">
-      AWS Lambda
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#amazon-elastic-container-service-amazon-ecs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Amazon Elastic Container Service (Amazon ECS)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#amazon-elastic-kubernetes-service-amazon-eks" class="md-nav__link">
-    <span class="md-ellipsis">
-      Amazon Elastic Kubernetes Service (Amazon EKS)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#aws-fargate" class="md-nav__link">
-    <span class="md-ellipsis">
-      AWS Fargate
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -977,10 +661,31 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../storage-and-databases/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Storage and databases
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -990,6 +695,353 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instance-stores-and-amazon-elastic-block-store-amazon-ebs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instance stores and amazon elastic block store (Amazon EBS)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instance stores and amazon elastic block store (Amazon EBS)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instance-store-volumes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instance store volumes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amazon-elastic-block-store-amazon-ebs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon elastic block store (Amazon EBS)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#amazon-simple-storage-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon simple storage service
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Amazon simple storage service">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#amazon-s3-standard-infrequent-access-s3-standard-ia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon S3 standard-infrequent access (S3 Standard-IA)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amazon-s3-glacier-flexible-retrieval" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon S3 Glacier Flexible Retrieval
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amazon-s3-glacier-deep-archive" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon S3 Glacier Deep Archive
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lifecycle-policies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lifecycle policies
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparing-amazon-ebs-and-amazon-s3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparing Amazon EBS and Amazon S3
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comparing Amazon EBS and Amazon S3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#amazon-ebs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon EBS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amazon-simple-storage-service-s3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon Simple Storage Service (S3)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#amazon-elastic-file-system-amazon-efs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon Elastic File System (Amazon EFS)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Amazon Elastic File System (Amazon EFS)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-difference-between-ebs-and-efs" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the difference between EBS and EFS?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#amazon-relational-database-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon relational database services
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#amazon-dynamodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon DynamoDB
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparing-amazon-rds-and-amazon-dynamodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparing Amazon RDS and Amazon DynamoDB
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comparing Amazon RDS and Amazon DynamoDB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#amazon-rds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon RDS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amazon-dynamodb_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon DynamoDB
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#which-one-is-right-for-you" class="md-nav__link">
+    <span class="md-ellipsis">
+      Which one is right for you?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#amazon-redshift" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon Redshift
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws-data-migration-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS Data Migration Service
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AWS Data Migration Service">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#homogeneous-databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Homogeneous databases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heterogeneous-migration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Heterogeneous migration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-database-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional database services
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional database services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#amazon-documentdb-mongodb-compatability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon DocumentDB (MongoDB compatability)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amazon-neptune" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon Neptune
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amazon-managed-blockchain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon Managed Blockchain
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amazon-quantum-ledger-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon Quantum Ledger Database
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database-accelerators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database accelerators
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Database accelerators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#amazon-elasticache" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon ElastiCache
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amazon-dynamodb-accelerator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon DynamoDB Accelerator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1029,64 +1081,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#amazon-ec2" class="md-nav__link">
+  <a href="#instance-stores-and-amazon-elastic-block-store-amazon-ebs" class="md-nav__link">
     <span class="md-ellipsis">
-      Amazon EC2
+      Instance stores and amazon elastic block store (Amazon EBS)
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#aws-instance-types" class="md-nav__link">
-    <span class="md-ellipsis">
-      AWS instance types
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="AWS instance types">
+    <nav class="md-nav" aria-label="Instance stores and amazon elastic block store (Amazon EBS)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#general-purpose" class="md-nav__link">
+  <a href="#instance-store-volumes" class="md-nav__link">
     <span class="md-ellipsis">
-      General purpose
+      Instance store volumes
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#compute-optimized" class="md-nav__link">
+  <a href="#amazon-elastic-block-store-amazon-ebs" class="md-nav__link">
     <span class="md-ellipsis">
-      Compute optimized
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#memory-optimized" class="md-nav__link">
-    <span class="md-ellipsis">
-      Memory optimized
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#accelerated-computing" class="md-nav__link">
-    <span class="md-ellipsis">
-      Accelerated computing
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#storage-optimized" class="md-nav__link">
-    <span class="md-ellipsis">
-      Storage optimized
+      Amazon elastic block store (Amazon EBS)
     </span>
   </a>
   
@@ -1098,55 +1114,46 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ec2-pricing" class="md-nav__link">
+  <a href="#amazon-simple-storage-service" class="md-nav__link">
     <span class="md-ellipsis">
-      EC2 pricing
+      Amazon simple storage service
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="EC2 pricing">
+    <nav class="md-nav" aria-label="Amazon simple storage service">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#on-demand" class="md-nav__link">
+  <a href="#amazon-s3-standard-infrequent-access-s3-standard-ia" class="md-nav__link">
     <span class="md-ellipsis">
-      On-demand
+      Amazon S3 standard-infrequent access (S3 Standard-IA)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#savings-plans" class="md-nav__link">
+  <a href="#amazon-s3-glacier-flexible-retrieval" class="md-nav__link">
     <span class="md-ellipsis">
-      Savings plans
+      Amazon S3 Glacier Flexible Retrieval
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#reserved-instances" class="md-nav__link">
+  <a href="#amazon-s3-glacier-deep-archive" class="md-nav__link">
     <span class="md-ellipsis">
-      Reserved instances
+      Amazon S3 Glacier Deep Archive
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#spot-instances" class="md-nav__link">
+  <a href="#lifecycle-policies" class="md-nav__link">
     <span class="md-ellipsis">
-      Spot instances
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dedicated-hosts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dedicated hosts
+      Lifecycle policies
     </span>
   </a>
   
@@ -1158,19 +1165,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#scaling-amazon-ec2" class="md-nav__link">
+  <a href="#comparing-amazon-ebs-and-amazon-s3" class="md-nav__link">
     <span class="md-ellipsis">
-      Scaling Amazon EC2
+      Comparing Amazon EBS and Amazon S3
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Scaling Amazon EC2">
+    <nav class="md-nav" aria-label="Comparing Amazon EBS and Amazon S3">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#auto-scaling" class="md-nav__link">
+  <a href="#amazon-ebs" class="md-nav__link">
     <span class="md-ellipsis">
-      Auto scaling
+      Amazon EBS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amazon-simple-storage-service-s3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon Simple Storage Service (S3)
     </span>
   </a>
   
@@ -1182,55 +1198,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#elastic-load-balancing" class="md-nav__link">
+  <a href="#amazon-elastic-file-system-amazon-efs" class="md-nav__link">
     <span class="md-ellipsis">
-      Elastic load balancing
+      Amazon Elastic File System (Amazon EFS)
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#messaging-and-queueing" class="md-nav__link">
-    <span class="md-ellipsis">
-      Messaging and queueing
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Messaging and queueing">
+    <nav class="md-nav" aria-label="Amazon Elastic File System (Amazon EFS)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#tightly-coupled-architecture" class="md-nav__link">
+  <a href="#what-is-the-difference-between-ebs-and-efs" class="md-nav__link">
     <span class="md-ellipsis">
-      Tightly-coupled architecture
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#loosely-coupled-architecture" class="md-nav__link">
-    <span class="md-ellipsis">
-      Loosely coupled architecture
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#amazon-sqs-amazon-simple-queue-service" class="md-nav__link">
-    <span class="md-ellipsis">
-      Amazon SQS (Amazon Simple Queue Service)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#amazon-sns-amazon-simple-notification-service" class="md-nav__link">
-    <span class="md-ellipsis">
-      Amazon SNS (Amazon Simple Notification Service)
+      What is the difference between EBS and EFS?
     </span>
   </a>
   
@@ -1242,55 +1222,181 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#additional-compute-services" class="md-nav__link">
+  <a href="#amazon-relational-database-services" class="md-nav__link">
     <span class="md-ellipsis">
-      Additional compute services
+      Amazon relational database services
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Additional compute services">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#amazon-dynamodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon DynamoDB
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparing-amazon-rds-and-amazon-dynamodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparing Amazon RDS and Amazon DynamoDB
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comparing Amazon RDS and Amazon DynamoDB">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#serverless-computing" class="md-nav__link">
+  <a href="#amazon-rds" class="md-nav__link">
     <span class="md-ellipsis">
-      Serverless computing
+      Amazon RDS
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#aws-lambda" class="md-nav__link">
+  <a href="#amazon-dynamodb_1" class="md-nav__link">
     <span class="md-ellipsis">
-      AWS Lambda
+      Amazon DynamoDB
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#amazon-elastic-container-service-amazon-ecs" class="md-nav__link">
+  <a href="#which-one-is-right-for-you" class="md-nav__link">
     <span class="md-ellipsis">
-      Amazon Elastic Container Service (Amazon ECS)
+      Which one is right for you?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#amazon-redshift" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon Redshift
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws-data-migration-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS Data Migration Service
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AWS Data Migration Service">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#homogeneous-databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Homogeneous databases
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#amazon-elastic-kubernetes-service-amazon-eks" class="md-nav__link">
+  <a href="#heterogeneous-migration" class="md-nav__link">
     <span class="md-ellipsis">
-      Amazon Elastic Kubernetes Service (Amazon EKS)
+      Heterogeneous migration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-database-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional database services
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional database services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#amazon-documentdb-mongodb-compatability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon DocumentDB (MongoDB compatability)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#aws-fargate" class="md-nav__link">
+  <a href="#amazon-neptune" class="md-nav__link">
     <span class="md-ellipsis">
-      AWS Fargate
+      Amazon Neptune
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amazon-managed-blockchain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon Managed Blockchain
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amazon-quantum-ledger-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon Quantum Ledger Database
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database-accelerators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database accelerators
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Database accelerators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#amazon-elasticache" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon ElastiCache
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amazon-dynamodb-accelerator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon DynamoDB Accelerator
     </span>
   </a>
   
@@ -1317,98 +1423,118 @@
 
 
 
-<h1 id="compute-in-the-cloud">Compute in the cloud</h1>
-<h2 id="amazon-ec2">Amazon EC2</h2>
-<p>EC2 refers to the servers that are used to run the virtual servers.</p>
-<p>AWS is already running a massive amount of compute capacity, and you can use however much of that capacity you want, whenever you want.</p>
-<p>You just request the EC2 instances you want, and they will boot up and be ready to use in just a few minutes.</p>
-<p>Once you're done you can easily terminate those instances.</p>
-<p>You only pay for what you use. You only pay for running instances, not stopped or terminated ones.</p>
-<p>EC2 runs on top of physical host machines managed by AWS using virtualization. You are sharing the host with other instances (virtual machines). A hypervisor on the host machine is responsible for sharing the underlying physical resources between the virtual machines.</p>
-<p>This is called multi-tenancy. Hypervisor coordinates this. Hypervisor isolates VMs from each other as they share resources from the host.</p>
-<p>One EC2 instance is not aware of other EC2 instances even though they are on the same host.</p>
-<p>When you provision an EC2 instance you can choose the operating system (Windows or Linux).</p>
-<p>Beyond the OS you also configure what software you want running on the instance.</p>
-<p>You might start with a small instance, and then if it starts to max out that server you can give the instance more memory and more CPU (vertically scaling an instance). You can do this whenever you need this.</p>
-<p>You also control networking (types of requests, publicly or privately accessible).</p>
-<h2 id="aws-instance-types">AWS instance types</h2>
-<p>Gives you flexibility of choosing appropriate distribution of resources for your applications.</p>
-<h3 id="general-purpose">General purpose</h3>
-<p>Balanced. Used for variety of diverse workloads.</p>
-<h3 id="compute-optimized">Compute optimized</h3>
-<p>Compute intensive tasks. Gaming servers, high performance computing (HPC), etc.</p>
-<h3 id="memory-optimized">Memory optimized</h3>
-<p>Good for memory intensive tasks, like high-performance databases.</p>
-<h3 id="accelerated-computing">Accelerated computing</h3>
-<p>Floating-point number calculations, graphics processing, data pattern matching.</p>
-<h3 id="storage-optimized">Storage optimized</h3>
-<p>Workloads that require high performance for locally stored data.</p>
-<h2 id="ec2-pricing">EC2 pricing</h2>
-<h3 id="on-demand">On-demand</h3>
-<p>Only pay for running duration. No long-term commitments. Good for getting up and running and testing workloads.</p>
-<h3 id="savings-plans">Savings plans</h3>
-<p>Low pricing, commitment to specific usage terms of a year or a few.</p>
-<p>Reduce you instance costs when you make an hourly spend commitment to an instance family and region for a 1-year or 3-year term.</p>
-<h3 id="reserved-instances">Reserved instances</h3>
-<p>Workloads with predictable usage. Can pay full upfront, partial upfront, and no upfront. Standard reserve instances require you to specify instance family and size, platform description, tenancy, and region.</p>
-<p>Available over 1-year or 3-year term.</p>
-<h3 id="spot-instances">Spot instances</h3>
-<p>Get spare computing capacity, but can be reclaimed any time it is needed with a 2 minute warning. Good for batch owrkloads.</p>
-<h3 id="dedicated-hosts">Dedicated hosts</h3>
-<p>Usually for meeting certain compliance requirements, and nobody else will be using that host.</p>
-<h2 id="scaling-amazon-ec2">Scaling Amazon EC2</h2>
-<p>Scalability and elasticity refers to how capacity can grow and shrink based on business needs.</p>
-<p>Do not want to end up with data centers under 10% average utilization for fear of missing out on peak demand.</p>
-<p>Amazon EC2 auto scaling enables you to automatically add or remove Amazon EC2 instances in response to changing application demand.</p>
-<p><strong>Dynamic scaling</strong> responds to changing demand.</p>
-<p><strong>Predictive scaling</strong> automatically schedules the right number of Amazon EC2 instances based on predicted demand.</p>
-<h3 id="auto-scaling">Auto scaling</h3>
-<p>When creating an auto scaling group you can set the minimum number of Amazon EC2 instances that start up as soon as you create the auto scaling group (minimum capacity). You can also set the desired capacity even though your application needs a minimum of a single Amazon EC2 instance to run (desired capacity defaults to minimum capacity if not specified). Next you can set the maximum capacity so that you can scale out with demand but not past a maximum.</p>
-<h2 id="elastic-load-balancing">Elastic load balancing</h2>
-<p>Say we have an uneven distribution of traffic across our EC2 instances. We need a host to direct customers to different lines to place their order, managing the distribution of traffic.</p>
-<p>We apply this to AWS environments as elastic load balancing.</p>
-<p>Load balancer is application that takes in requests and routes them to different instances to be processed. Many off the shelf solutions that work great with AWS.</p>
-<p>AWS can provide this service in the form of Elastic Load Balancing. This is an AWS managed service that addresses issue of load balancing.</p>
-<p>Because it runs at the region level rather than on specific EC2 instances, the service is automatically highly available with no additional effort on your part.</p>
-<h2 id="messaging-and-queueing">Messaging and queueing</h2>
-<h3 id="tightly-coupled-architecture">Tightly-coupled architecture</h3>
-<p>If a single component has a problem it causes problems for other components or the whole system.</p>
-<p>Applications made up of tightly coupled components are monolithic.</p>
-<h3 id="loosely-coupled-architecture">Loosely coupled architecture</h3>
-<p>Single failure won't cause cascading failures.</p>
-<p>You have a queue in the middle where messages go to eventually be processed. If a given application can't process the message, it stays in the queue until it is processed by another application.</p>
-<h3 id="amazon-sqs-amazon-simple-queue-service">Amazon SQS (Amazon Simple Queue Service)</h3>
-<p>Allows you to send, store, and receive messages between software components at any volume, without losing messages or requiring other services to be available.</p>
-<p><strong>Payload</strong> is the data inside the message, and it is protected until delivery.</p>
-<p>SQS queues are where messages are placed until they are processed.</p>
-<h3 id="amazon-sns-amazon-simple-notification-service">Amazon SNS (Amazon Simple Notification Service)</h3>
-<p>Amazon SNS can send out messages but it can also send out notifications to end users. Uses a publish subscribe model.</p>
-<p>Can make an Amazon SNS topic: a channel for messages to be delivered. Can then configure subscribers for that topic, and publish messages for subscribers.</p>
-<p>Subscribers can be web servers, email addresses, AWS Lambda functions, or several other options.</p>
-<h2 id="additional-compute-services">Additional compute services</h2>
-<p>Though EC2 is good in a lot of cases, depending on your use case you might want an alternative.</p>
-<p>When using EC2 you are responsible for setting up and managing your instances over time.</p>
-<p>AWS offers multiple serverless compute options, meaning that you don't see or access the underlying infrastructure tha`t is hosting your application. Instead, all management of the underlying environment is taken care of. All you need to do is focus on your application.</p>
-<h3 id="serverless-computing">Serverless computing</h3>
-<p>When computing with virtual servers you have to think about the servers and code, while when serverless computing you only have to think about the code.</p>
-<h3 id="aws-lambda">AWS Lambda</h3>
-<p>AWS Lambda is a serverless compute option. More suited for quick processes, not something like deep learning.</p>
-<p>Allows you to run code without needing to provision or manage servers. You can run code for virtually any type of application or backend service, all with zero administration.</p>
-<p>Setup:</p>
-<ol>
-<li>Upload code to Lambda</li>
-<li>Set code to trigger from an event source</li>
-<li>Code only runs when triggered</li>
-<li>Pay only for the compute time you use</li>
-</ol>
-<h3 id="amazon-elastic-container-service-amazon-ecs">Amazon Elastic Container Service (Amazon ECS)</h3>
-<p>Containers provide you with a standard way to package your application's code and dependencies into a single object. Can also use containers for processes and workflows in which there are essential requirements for security, reliability, and scalability.</p>
-<p>Using containers could delp to ensure that the application's environment remains consistent regardless of deployment.</p>
-<p>ECS supports Docker containers. With Amazon ECS you can use API calls to launch and stop Docker-enabled applications.</p>
-<h3 id="amazon-elastic-kubernetes-service-amazon-eks">Amazon Elastic Kubernetes Service (Amazon EKS)</h3>
-<p>Amazon EKS is a fully managed service that you can use to run Kubernetes on AWS. Kubernetes is open-source software that enables you to deploy and manage containerized applications at scale.</p>
-<h3 id="aws-fargate">AWS Fargate</h3>
-<p>Serverless compute engine for containers. Works with both Amazon ECS and Amazon EKS. When using Fargate, you do not need to provision or manage servers. Fargate manages the server infrastructure for you.</p>
+<h1 id="storage-and-databases">Storage and databases</h1>
+<p>As EC2 instances run applications, those applications will often require block-level storage. In block level storage, when something is changed only that aspect is rewritten rather than the entire thing. This makes it an efficient storage type when working with databases, enterprise software or file systems.</p>
+<h2 id="instance-stores-and-amazon-elastic-block-store-amazon-ebs">Instance stores and amazon elastic block store (Amazon EBS)</h2>
+<h3 id="instance-store-volumes">Instance store volumes</h3>
+<p>When you launch an EC2 instance it might provide you with local storage called instance store volumes. These are physically attached to the host your EC2 instance is running on top of. You can write to it just like a normal hard drive. The problem here is that if you terminate the instance or host, all data in the instance store volumes will be deleted. This is because you often start up an instance on a different host.</p>
+<p>So these are useful in situations where you can afford to lose the data being written to the drives.</p>
+<h3 id="amazon-elastic-block-store-amazon-ebs">Amazon elastic block store (Amazon EBS)</h3>
+<p>If you do not want to be losing your database every time your instance is terminated, you can use Amazon EBS. This allows you to create virtual hard drives that are not attached to the host the EC2 instance is running on. The data persists through stops and starts of an instance.</p>
+<p>EBS allows you to create incremental backups of your database called snapshots.</p>
+<h2 id="amazon-simple-storage-service">Amazon simple storage service</h2>
+<p>Store and retrieve an unlimited amount of data. Store data as objects, in buckets.</p>
+<p>in object storage, each object consists of data, metadata, and a key.</p>
+<p>Maximum object size of 5 TB. Can version objects, and create multiple buckets.</p>
+<p>Another way to use S3 is static website hosting (a bunch of static HTML files).</p>
+<h3 id="amazon-s3-standard-infrequent-access-s3-standard-ia">Amazon S3 standard-infrequent access (S3 Standard-IA)</h3>
+<p>Used for data accessed less frequently, requires rapid access when needed. Good place to store backups, disaster recovery files, etc.</p>
+<h3 id="amazon-s3-glacier-flexible-retrieval">Amazon S3 Glacier Flexible Retrieval</h3>
+<p>Good for retaining data for several years for auditing purposes. Can either move data to it or use vaults populated with archives. Can use a S3 Glacier Vault lock policy to meet compliance requirements (can use policies like write once/read many WORM).</p>
+<h3 id="amazon-s3-glacier-deep-archive">Amazon S3 Glacier Deep Archive</h3>
+<p>Good for archival data.</p>
+<h3 id="lifecycle-policies">Lifecycle policies</h3>
+<p>Policies that automatically move data between tiers. For example, keeping an object in S3 standard for 90 days then moving it to S3 standard IA for 30 days, and so on...</p>
+<h2 id="comparing-amazon-ebs-and-amazon-s3">Comparing Amazon EBS and Amazon S3</h2>
+<h3 id="amazon-ebs">Amazon EBS</h3>
+<ul>
+<li>Sizes up to 16 TiB</li>
+<li>Survive termination of their EC2 instance</li>
+<li>Solid state by default</li>
+<li>HDD options</li>
+</ul>
+<p>An EBS volume must be located in the same Availability Zone as the Amazon EC2 instance to which it is attached.</p>
+<h3 id="amazon-simple-storage-service-s3">Amazon Simple Storage Service (S3)</h3>
+<ul>
+<li>Unlimited storage</li>
+<li>Individual objects up to 5 TBs</li>
+<li>Write once/read many</li>
+<li>99.999999999% durability</li>
+</ul>
+<p><strong>Difference between object storage and block storage</strong>: Object storage treats any file as a complete, discrete object. Great for documents, images, and video files that get uploaded and consumed as entire objects. However, any time a change happens you must re-upload the entire file. Block storage breaks those files down into component parts, meaning that when you make an edit to one part, the edit only updates the blocks where those bits live.</p>
+<p>If you are using only complete objects, S3 is victorious. If you are doing complex read/write change functions, then EBS is better.</p>
+<h2 id="amazon-elastic-file-system-amazon-efs">Amazon Elastic File System (Amazon EFS)</h2>
+<p>Managed file system. Common for businesses to have shared file systems across their applications. Might have multiple servers running analytics on data stored in a shared file system. With EFS you can leave the file system in place and let AWS handle all the scaling and replication.</p>
+<p>EFS allows you to have multiple instances that can access the data in EFS at the same time. Scales up and down as needed.</p>
+<p>Data in an Amazon EFS file system can be accessed concurrently from all the Availability Zones in the Region where the file system is located.</p>
+<h3 id="what-is-the-difference-between-ebs-and-efs">What is the difference between EBS and EFS?</h3>
+<p>EBS volumes attach to EC2 instances and are an availability zone level resource. In order to attach EC2 to EBS you need to be in the same AZ. Volumes also do not automatically scale to give you more storage.</p>
+<p>EFS can have multiple instances reading and writing simultaneously. It is a true Linux file system, and a regional resource. So any EC2 instance in the region can write to the EFS. Also automatically scales.</p>
+<h2 id="amazon-relational-database-services">Amazon relational database services</h2>
+<p>If you want to keep track of relationships between different data, you should use a relational database management system (RDBMS).</p>
+<p>AWS supports multiple databases like MySQL, PostgreSQL, Oracle, and Microsoft SQL Server.</p>
+<p>To migrate your databases to AWS you can perform a lift and shift to an EC2 instance.</p>
+<p>You can also use a more managed service like Amazon Relational Database Service (Amazon RDS). Comes with automated patching, backups, redundancy, failover, disaster recovery, etc.</p>
+<p>Amazon Aurora is another option that is even more managed. Comes in MySQL and PostgreSQL, and comes in at 1/10th the cost of commercial databases. Data is replicated across facilities, and you can upload up to 15 read replicas. There are also continuous backups to S3, so you always have a backup ready to restore.</p>
+<p>Amazon Aurora is considered to be part of Amazon RDS.</p>
+<h2 id="amazon-dynamodb">Amazon DynamoDB</h2>
+<p>At its most basic level it is a serverless database. You don't need to manage the underlying instances or infrastructure powering it. You can create tables populated with items that have attributes. The burden of operating an available database is much lower when using DynamoDB.</p>
+<p>Does not use SQL. Rigid SQL databases can have performance and scaling issues when under stress. Might not be best for dataset that is not rigid and might be accessed at a very high rate.</p>
+<p>DynamoDB is a non-relational database. You can add and remove attributes from items in a table anytime, and not every item in a table has to have the same attributes. You write queries based on a small subset of attributes designated as keys. Queries of this type generally focus on a collection of items from one table rather than across multiple tables. Allows it to be quick and scalable.</p>
+<h2 id="comparing-amazon-rds-and-amazon-dynamodb">Comparing Amazon RDS and Amazon DynamoDB</h2>
+<h3 id="amazon-rds">Amazon RDS</h3>
+<ul>
+<li>Automatic high availability; recovery provided</li>
+<li>Customer ownership of data</li>
+<li>Customer ownership of schema</li>
+<li>Customer control of network</li>
+</ul>
+<h3 id="amazon-dynamodb_1">Amazon DynamoDB</h3>
+<ul>
+<li>Key-value</li>
+<li>NoSQL</li>
+<li>Massive throughput capabilities</li>
+<li>PB size potential</li>
+<li>Granular API access</li>
+</ul>
+<h3 id="which-one-is-right-for-you">Which one is right for you?</h3>
+<p>If you need complex relational joins between tables, you need RDS. For pretty much anything else, you could use DynamoDB. If you basically just need lookup tables (single table stuff), DynamoDB would be great.</p>
+<h2 id="amazon-redshift">Amazon Redshift</h2>
+<p>Once data becomes too complex to handle with traditional relational databases, you've entered the world of data warehouses. Good for historical analytics. As long as your data question involves looking backward, then a data warehouse could be right for that situation.</p>
+<p>Amazon Redshift is data warehousing as a service, and is massively scalable. Can achieve much better performance compared to other database technologies for these kinds of queries. When you need big data business intelligence solutions, Redshift is a good choice.</p>
+<h2 id="aws-data-migration-service">AWS Data Migration Service</h2>
+<p>Does AWS have a magical way to help you migrate your existing database?</p>
+<p>Essentially migrate data between a source database and target database, with the source database remaining fully operational during the migration. The source and target databases don't even have to be the same type.</p>
+<h3 id="homogeneous-databases">Homogeneous databases</h3>
+<p>Migration between two databases of same type. The source database could be on premises running on EC2 instances, or can be an Amazon RDS database. The target database can be Amazon EC2, or Amazon RDS.</p>
+<h3 id="heterogeneous-migration">Heterogeneous migration</h3>
+<p>When the source and target are of different types. 2-step process, uses conversion tool to match the schema and database code, then you migrate it.</p>
+<p><strong>Other use cases</strong>:</p>
+<ul>
+<li>Development and test database migrations</li>
+<li>When you want your developers to test against production data but without affecting production users, so you create a copy</li>
+<li>Database consolidation</li>
+<li>When you have several databases and want to combine them into one</li>
+<li>Continuous replication</li>
+<li>When you use DMS to perform continuous database replication (disaster recovery, or geographic separation)</li>
+</ul>
+<h2 id="additional-database-services">Additional database services</h2>
+<p>What if you need a full content management system?</p>
+<h3 id="amazon-documentdb-mongodb-compatability">Amazon DocumentDB (MongoDB compatability)</h3>
+<p>Content management, catalogs, user profiles, etc.</p>
+<p>What if you had a social network and wanted to see who is connected to who etc.?</p>
+<h3 id="amazon-neptune">Amazon Neptune</h3>
+<p>Graph database engineered for social networking. Also great for fraud detection needs. Or tracking a supply chain, or banking records requiring 100% immutability.</p>
+<h3 id="amazon-managed-blockchain">Amazon Managed Blockchain</h3>
+<p>Blockchain solution.</p>
+<h3 id="amazon-quantum-ledger-database">Amazon Quantum Ledger Database</h3>
+<p>immutable records where any entry can never be removed from the audits.</p>
+<h2 id="database-accelerators">Database accelerators</h2>
+<p>Caching layers that can hlp improve the read times of common requests.</p>
+<h3 id="amazon-elasticache">Amazon ElastiCache</h3>
+<p>Caching layers without heavy lifting.</p>
+<h3 id="amazon-dynamodb-accelerator">Amazon DynamoDB Accelerator</h3>
+<p>An in-memory cache for DynamoDB.</p>
 <p><strong>Source:</strong> <a href="https://www.aws.training/Details/eLearning?id=60697">AWS Cloud Practitioner Essentials</a>, AWS Training &amp; Certification.</p>
 
 
