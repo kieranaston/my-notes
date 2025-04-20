@@ -30,6 +30,7 @@ nav:
       - Compute in the cloud: aws-cloud-practitioner-essentials/compute-in-the-cloud.md
       - Global infrastructure and reliability: aws-cloud-practitioner-essentials/global-infrastructure-and-reliability.md
       - Networking: aws-cloud-practitioner-essentials/networking.md
+      - Storage and databases: aws-cloud-practitioner-essentials/storage-and-databases.md
 
 markdown_extensions:
   - pymdownx.arithmatex:
