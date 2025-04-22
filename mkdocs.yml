@@ -32,6 +32,7 @@ nav:
       - Networking: aws-cloud-practitioner-essentials/networking.md
       - Storage and databases: aws-cloud-practitioner-essentials/storage-and-databases.md
       - Security: aws-cloud-practitioner-essentials/security.md
+      - Pricing and support: aws-cloud-practitioner-essentials/pricing-and-support.md
 
 markdown_extensions:
   - pymdownx.arithmatex:
