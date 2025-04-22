@@ -34,6 +34,7 @@ nav:
       - Security: aws-cloud-practitioner-essentials/security.md
       - Pricing and support: aws-cloud-practitioner-essentials/pricing-and-support.md
       - Migration and innovation: aws-cloud-practitioner-essentials/migration-and-innovation.md
+      - Well-architected framework: aws-cloud-practitioner-essentials/well-architected-framework.md
 
 markdown_extensions:
   - pymdownx.arithmatex:
