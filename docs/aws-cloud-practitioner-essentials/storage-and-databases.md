@@ -145,11 +145,11 @@ When the source and target are of different types. 2-step process, uses conversi
 **Other use cases**:
 
 * Development and test database migrations
-  * When you want your developers to test against production data but without affecting production users, so you create a copy
+    * When you want your developers to test against production data but without affecting production users, so you create a copy
 * Database consolidation
-  * When you have several databases and want to combine them into one
+    * When you have several databases and want to combine them into one
 * Continuous replication
-  * When you use DMS to perform continuous database replication (disaster recovery, or geographic separation)
+    * When you use DMS to perform continuous database replication (disaster recovery, or geographic separation)
 
 ## Additional database services
 

@@ -58,7 +58,7 @@ Some of the route 53 routing policies:
 
 * Latency based
 * Geolocation DNS
-  * Direct traffic based on where customer is located
+    * Direct traffic based on where customer is located
 * Geoproximity
 * Weighted round robin
 

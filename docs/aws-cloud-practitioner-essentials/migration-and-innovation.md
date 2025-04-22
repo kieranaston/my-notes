@@ -7,36 +7,36 @@ Guidance for moving over to cloud.
 Divides guidance into six perspectives:
 
 * Business perspective
-  * Create a business case for cloud adoption
+    * Create a business case for cloud adoption
 * People perspective
-  * Evaluate organizational structures and roles, new skill and process requirements, identify gaps
+    * Evaluate organizational structures and roles, new skill and process requirements, identify gaps
 * Governance perspective
-  * Understand how to update the staff skills and processes necessary to ensure business governance in the cloud
+    * Understand how to update the staff skills and processes necessary to ensure business governance in the cloud
 * Platform perspective
-  * Implementing new solutions on the cloud, migrating on-premises workloads to the cloud
+    * Implementing new solutions on the cloud, migrating on-premises workloads to the cloud
 * Security perspective
-  * Selection and implementation of security controls that meet the organization's needs
+    * Selection and implementation of security controls that meet the organization's needs
 * Operations perspective
-  * Enable, run, use, operate, recover IT workloads to level agreed upon with business stakeholders
+    * Enable, run, use, operate, recover IT workloads to level agreed upon with business stakeholders
 
 # Migration
 
 6 strategies for migration:
 
 * Rehosting
-  * Moving applications without changes
+    * Moving applications without changes
 * Replatforming
-  * Making a few cloud optimizations without changing core application architecture
+    * Making a few cloud optimizations without changing core application architecture
 * Refactoring/re-architecting
-  * Reimagining how an application is architected and developed by using cloud-native features
-  * Driven by need to add features, scale, performance
+    * Reimagining how an application is architected and developed by using cloud-native features
+    * Driven by need to add features, scale, performance
 * Repurchasing
-  * Moving from traditional license to software-as-a-service model
-  * Replacing an existing application with a cloud-based version
+    * Moving from traditional license to software-as-a-service model
+    * Replacing an existing application with a cloud-based version
 * Retaining
-  * Keeping applications that are critical for the business in the source environment
+    * Keeping applications that are critical for the business in the source environment
 * Retiring
-  * Removing applications that are no longer needed
+    * Removing applications that are no longer needed
 
 ## AWS snow family
 
