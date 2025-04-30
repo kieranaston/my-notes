@@ -588,6 +588,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-do-you-compute-number-to-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do you compute number to pattern?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     <span class="md-ellipsis">
       References
@@ -907,6 +916,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#how-do-you-compute-number-to-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do you compute number to pattern?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     <span class="md-ellipsis">
       References
@@ -1022,7 +1040,28 @@
     <span class="nb">print</span><span class="p">(</span><span class="n">frequencies</span><span class="p">)</span>
     <span class="k">return</span> <span class="p">[</span><span class="n">key</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">frequencies</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">value</span> <span class="o">==</span> <span class="n">max_value</span><span class="p">]</span>
 </code></pre></div>
-<p>This algorithm initializes a dict of all possible <span class="arithmatex">\(k\)</span>-mers. It then iterates through <span class="arithmatex">\(Text\)</span> and adds each <span class="arithmatex">\(k\)</span>-mer occurrence to the frequency dict. We then get the maximum value of the frequency dict, and iterate through the frequency dict to check for strings that match that maximum value. Strings that have occurrences equal to the max are returned. </p>
+<p>This algorithm initializes a dict of all possible <span class="arithmatex">\(k\)</span>-mers. It then iterates through <span class="arithmatex">\(Text\)</span> and adds each <span class="arithmatex">\(k\)</span>-mer occurrence to the frequency dict. We then get the maximum value of the frequency dict, and iterate through the frequency dict to check for strings that match that maximum value. Strings that have occurrences equal to the max are returned.</p>
+<h2 id="how-do-you-compute-number-to-pattern">How do you compute number to pattern?</h2>
+<p>They use a recursive algorithm.</p>
+<p>We observe that if we remove the final symbol from all lexicographically ordered <span class="arithmatex">\(k\)</span>-mers, the resulting list is still ordered lexicographically.</p>
+<p>We also see that once we do this, every (<span class="arithmatex">\(k\)</span>-1)-mer in the resulting list is repeated four times.</p>
+<p>So, in the case of <span class="arithmatex">\(3\)</span>-mers and the pattern of <span class="arithmatex">\(AGT\)</span> we see that</p>
+<p><span class="arithmatex">\(PatternToNumber(AGT) = 4 \cdot PatternToNumber(AG) + SymbolToNumber(T) \\
+ = 8 + 3 = 1\)</span></p>
+<p>Where <span class="arithmatex">\(SymbolToNumber(symbol)\)</span> is the function transforming symbols <span class="arithmatex">\(A, C, G, T\)</span> into their respective integers 0, 1, 2, and 3.</p>
+<p>By removing the final symbol of <span class="arithmatex">\(Pattern\)</span>, denotes <span class="arithmatex">\(LastSymbol(Pattern)\)</span>, we obtain a <span class="arithmatex">\((k-1)\)</span>-mer that we denote as <span class="arithmatex">\(Prefix(Pattern)\)</span>.</p>
+<p>We can generalize this observation to the following formula:</p>
+<p>$
+PatternToNumber(Pattern) = 4 \cdot PatternToNumber(Prefix(Pattern)) + SymbolToNumber(LastSymbol(Pattern))
+$</p>
+<p>So we can construct the following recursive algorithm:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">pattern_to_number</span><span class="p">(</span><span class="n">pattern</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">pattern</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="n">symbol</span> <span class="o">=</span> <span class="n">pattern</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">prefix</span> <span class="o">=</span> <span class="n">pattern</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">return</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">pattern_to_number</span><span class="p">(</span><span class="n">prefix</span><span class="p">)</span> <span class="o">+</span> <span class="n">symbol_to_number</span><span class="p">(</span><span class="n">symbol</span><span class="p">)</span>
+</code></pre></div>
 <h2 id="references">References</h2>
 <p>Compeau, P., &amp; Pevzner, P. (2015). <em>Bioinformatics algorithms: An active learning approach</em> (Vol. 1). Active Learning Publishers.</p>
 
