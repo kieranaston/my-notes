@@ -9,25 +9,23 @@
       
       
       
-        <link rel="prev" href="../../..">
+        <link rel="prev" href="../amazon-s3/">
       
       
-        <link rel="next" href="../help-commands-and-pipes/">
       
-      
-      <link rel="icon" href="../../../img/favicon.ico">
+      <link rel="icon" href="../../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.5">
     
     
       
-        <title>Commands and permissions - Kieran's notes</title>
+        <title>Introduction to Amazon DynamoDB - Kieran's notes</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.8608ea7d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -40,7 +38,7 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -64,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#commands-and-permissions" class="md-skip">
+        <a href="#introduction-to-amazon-dynamodb" class="md-skip">
           Skip to content
         </a>
       
@@ -80,9 +78,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Kieran&#39;s notes" class="md-header__button md-logo" aria-label="Kieran's notes" data-md-component="logo">
+    <a href="../.." title="Kieran&#39;s notes" class="md-header__button md-logo" aria-label="Kieran's notes" data-md-component="logo">
       
-  <img src="../../../img/logo.png" alt="logo">
+  <img src="../../img/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -99,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Commands and permissions
+              Introduction to Amazon DynamoDB
             
           </span>
         </div>
@@ -174,9 +172,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Kieran&#39;s notes" class="md-nav__button md-logo" aria-label="Kieran's notes" data-md-component="logo">
+    <a href="../.." title="Kieran&#39;s notes" class="md-nav__button md-logo" aria-label="Kieran's notes" data-md-component="logo">
       
-  <img src="../../../img/logo.png" alt="logo">
+  <img src="../../img/logo.png" alt="logo">
 
     </a>
     Kieran's notes
@@ -191,7 +189,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -209,19 +207,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -236,7 +232,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Linux essentials
@@ -247,19 +243,17 @@
                 
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
         
           
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
@@ -274,7 +268,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             Linux command line
@@ -285,31 +279,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Commands and permissions
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../linux-essentials/linux-command-line/commands-and-permissions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -319,71 +292,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#options" class="md-nav__link">
-    <span class="md-ellipsis">
-      Options
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#arguments" class="md-nav__link">
-    <span class="md-ellipsis">
-      Arguments
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#useful-commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      Useful commands
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#permissions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Permissions
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#file-ownership" class="md-nav__link">
-    <span class="md-ellipsis">
-      File ownership
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -396,7 +304,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../help-commands-and-pipes/" class="md-nav__link">
+      <a href="../../linux-essentials/linux-command-line/help-commands-and-pipes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -418,7 +326,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../file-commands/" class="md-nav__link">
+      <a href="../../linux-essentials/linux-command-line/file-commands/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -440,7 +348,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../text-and-grep-commands/" class="md-nav__link">
+      <a href="../../linux-essentials/linux-command-line/text-and-grep-commands/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -462,7 +370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../file-comparison-and-splitting/" class="md-nav__link">
+      <a href="../../linux-essentials/linux-command-line/file-comparison-and-splitting/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -528,7 +436,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux-administration/utility-commands-user-management/" class="md-nav__link">
+      <a href="../../linux-essentials/linux-administration/utility-commands-user-management/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -601,7 +509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../bioinformatics-algorithms/where-in-genome-does-dna-replication-begin/" class="md-nav__link">
+      <a href="../../bioinformatics-algorithms/where-in-genome-does-dna-replication-begin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -666,7 +574,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../aws-cloud-practitioner-essentials/intro-to-aws/" class="md-nav__link">
+      <a href="../../aws-cloud-practitioner-essentials/intro-to-aws/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -688,7 +596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../aws-cloud-practitioner-essentials/compute-in-the-cloud/" class="md-nav__link">
+      <a href="../../aws-cloud-practitioner-essentials/compute-in-the-cloud/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -710,7 +618,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../aws-cloud-practitioner-essentials/global-infrastructure-and-reliability/" class="md-nav__link">
+      <a href="../../aws-cloud-practitioner-essentials/global-infrastructure-and-reliability/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -732,7 +640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../aws-cloud-practitioner-essentials/networking/" class="md-nav__link">
+      <a href="../../aws-cloud-practitioner-essentials/networking/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -754,7 +662,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../aws-cloud-practitioner-essentials/storage-and-databases/" class="md-nav__link">
+      <a href="../../aws-cloud-practitioner-essentials/storage-and-databases/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -776,7 +684,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../aws-cloud-practitioner-essentials/security/" class="md-nav__link">
+      <a href="../../aws-cloud-practitioner-essentials/security/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -798,7 +706,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../aws-cloud-practitioner-essentials/pricing-and-support/" class="md-nav__link">
+      <a href="../../aws-cloud-practitioner-essentials/pricing-and-support/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -820,7 +728,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../aws-cloud-practitioner-essentials/migration-and-innovation/" class="md-nav__link">
+      <a href="../../aws-cloud-practitioner-essentials/migration-and-innovation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -842,7 +750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../aws-cloud-practitioner-essentials/well-architected-framework/" class="md-nav__link">
+      <a href="../../aws-cloud-practitioner-essentials/well-architected-framework/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -868,17 +776,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -893,7 +803,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             AWS Certified Solutions Architect
@@ -907,7 +817,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../solutions-architect/launching-ec2-instances/" class="md-nav__link">
+      <a href="../launching-ec2-instances/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -929,7 +839,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../solutions-architect/amazon-s3/" class="md-nav__link">
+      <a href="../amazon-s3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -948,10 +858,31 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../solutions-architect/dynamodb/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Introduction to Amazon DynamoDB
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -961,6 +892,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creating-and-modifying-items" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating and modifying items
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#querying-and-scanning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Querying and scanning
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#knowledge-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Knowledge check
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1000,45 +978,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#options" class="md-nav__link">
+  <a href="#creating-and-modifying-items" class="md-nav__link">
     <span class="md-ellipsis">
-      Options
+      Creating and modifying items
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#arguments" class="md-nav__link">
+  <a href="#querying-and-scanning" class="md-nav__link">
     <span class="md-ellipsis">
-      Arguments
+      Querying and scanning
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#useful-commands" class="md-nav__link">
+  <a href="#knowledge-check" class="md-nav__link">
     <span class="md-ellipsis">
-      Useful commands
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#permissions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Permissions
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#file-ownership" class="md-nav__link">
-    <span class="md-ellipsis">
-      File ownership
+      Knowledge check
     </span>
   </a>
   
@@ -1060,67 +1020,28 @@
 
 
 
-<h1 id="commands-and-permissions">Commands and permissions</h1>
-<p>Commands syntax:</p>
-<div class="highlight"><pre><span></span><code>command option(s) argument(s)
-</code></pre></div>
-<h2 id="options">Options</h2>
-<p>Options modify the way a command works, and usually consist of a dash followed by a single letter.</p>
-<p>Multiple options can be grouped together after a single hyphen.</p>
-<h2 id="arguments">Arguments</h2>
-<p>Most commands are used with one or more arguments.</p>
-<p>Some commands assume a default argument if none is supplied.</p>
-<p>Arguments are optional for some commands and required by others.</p>
-<h2 id="useful-commands">Useful commands</h2>
-<p><code>whoami</code> to determine which user you are.</p>
-<p><code>pwd</code> to display your directory.</p>
-<p><code>cd</code> to move about directories.</p>
-<p><code>ls</code> to see items within working directory.</p>
-<p><code>cp</code> to copy a file from one directory to another.</p>
-<ul>
-<li>The third column in file info tells you the owner of the file.</li>
-<li>The fourth column is the group name for that file.</li>
-<li>Fifth column gives number of bytes for the file.</li>
-<li><code>ll</code> gives same result as <code>ls -l</code></li>
-</ul>
-<p><code>rm -f</code> to delete a file without confirming, <code>rm -r</code> to delete a directory.</p>
-<p><code>mkdir</code> to create a directory.</p>
-<p><code>man</code> with a command as argument to see man page for a command.</p>
-<p><code>date</code> gives the date on your system.</p>
-<p><code>more</code> gives output one page at a time. Piping with more is useful.</p>
-<p><code>tail</code> gives last line of an output. Also useful in piping.</p>
-<p><code>cat</code> reads contents of a file.</p>
-<p>To become a super user (root user) use <code>sm -</code> and enter your password.</p>
-<ul>
-<li>To leave root user account: <code>exit</code></li>
-</ul>
-<h2 id="permissions">Permissions</h2>
-<p><code>r</code> - read
-<code>w</code> - write
-<code>x</code> - execute = running a program</p>
-<p>Each permission can be controlled at three different levels:</p>
-<p><code>u</code> - user
-<code>g</code> - group
-<code>o</code> - other = everyone on the system</p>
-<p>To see file or directory permissions run <code>ls -l</code>:</p>
-<blockquote>
-<p>Example: <code>-rwxrwxrwx</code></p>
-</blockquote>
-<p>First bit indicates a file, next three bits are user permissions, then next three are group, and last three are permissions for others.</p>
-<p><code>chmod</code> can be used to change permissions.</p>
-<blockquote>
-<p>Example: Removing group write permissions from file <code>testfile</code>: <code>chmod g-w testfile</code>
-Example: Removing write permissions for everyone from file <code>testfile</code>: <code>chmod a-w testfile</code></p>
-</blockquote>
-<h2 id="file-ownership">File ownership</h2>
-<p><code>chown</code> changes the ownership of a file.</p>
-<blockquote>
-<p>Example: To change the ownership from a user to root: <code>chown root testfile</code></p>
-<p><code>chgrp</code> changes the group ownership of a file.</p>
-</blockquote>
-<p>The <code>-R</code> option changes ownership recursively (everything within will also have ownership changed).</p>
-<p><strong>Note</strong>: If a file you do not have ownership of is within a directory that you have permissions for, you can still delete/make changes to it. For this reason is it often important to perform recursive ownership changes to ensure they are properly applied for your case.</p>
-<p><strong>Source:</strong> <a href="https://alison.com/topic/learn/118892/commands-and-permissions">Linux for Absolute Beginners: Commands and Permissions</a> by Imran Afzal, Allison.</p>
+<h1 id="introduction-to-amazon-dynamodb">Introduction to Amazon DynamoDB</h1>
+<p>DynamoDB is a fast and flexible NoSQL database supporting both document and key-value data models.</p>
+<p>Each table requires a primary key, and sometimes has a sort key as well. The combo of primary key and sort key uniquely identifies each item in a DynamoDB table.</p>
+<p>When creating a table you are able to specify both the primary key and sort key.</p>
+<p>Each table contains multiple items. An item is a group of attributes that is uniquely identifiable among all the other items. Items are like rows. No limit to number of items you can store in a table.</p>
+<p>Each item composed of one or more attributes. Attributes are fundamental data elements. Similar to columns in other database systems, but each item can have different attributes.</p>
+<p>Each item requires the primary key and sort key (if used), but otherwise you can use different attributes.</p>
+<h2 id="creating-and-modifying-items">Creating and modifying items</h2>
+<p>You can create and view items via the "explore items: music" page.</p>
+<p>Faster ways to load data into DynamoDB include using the AWS Data Pipeline, programmatically loading data, or using one of the free tools available on the internet.</p>
+<p>You can also modify existing items.</p>
+<h2 id="querying-and-scanning">Querying and scanning</h2>
+<p>There are two ways to query a DynamoDB table: Query and Scan.</p>
+<p>A query operation finds items based on primary key and optionally sort key. It is fully indexed and so it runs very fast. A query is the most efficient way to retrieve data from a DynamoDB table.</p>
+<p>Scanning involves looking through every item in a table, so it is less efficient and can take significant time for larger tables.</p>
+<h2 id="knowledge-check">Knowledge check</h2>
+<p>Which statement BEST describes the flexibility of adding attributes to items in a DynamoDB table? New attributes can be added to some items without affecting others</p>
+<p>Which of the following statements is TRUE about inserting data into a DynamoDB table? You can insert items with different attributes into the same table</p>
+<p>What should you consider before deleting a DynamoDB table? The need for a backup of the data</p>
+<p>Which operation is used to retrieve data from a DynamoDB table based on specific criteria? Query</p>
+<p>What is the relationship between a Primary Key and a Sort Key in an Amazon DynamoDB table? They uniquely identify each item when used in combination</p>
+<p><strong>Source:</strong> <a href="https://explore.skillbuilder.aws/learn/learning-plans/2159/aws-certified-solutions-architect-associate-subscription-partner-subscription">AWS Certified Solutions Architect - Associate (Subscription - Partner Subscription)</a>, AWS Training &amp; Certification.</p>
 
 
 
@@ -1167,10 +1088,10 @@ Example: Removing write permissions for everyone from file <code>testfile</code>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
       
