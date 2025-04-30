@@ -134,7 +134,41 @@ def faster_frequent_words(text, k):
     return [key for key, value in frequencies.items() if value == max_value]
 ```
 
-This algorithm initializes a dict of all possible $k$-mers. It then iterates through $Text$ and adds each $k$-mer occurrence to the frequency dict. We then get the maximum value of the frequency dict, and iterate through the frequency dict to check for strings that match that maximum value. Strings that have occurrences equal to the max are returned. 
+This algorithm initializes a dict of all possible $k$-mers. It then iterates through $Text$ and adds each $k$-mer occurrence to the frequency dict. We then get the maximum value of the frequency dict, and iterate through the frequency dict to check for strings that match that maximum value. Strings that have occurrences equal to the max are returned.
+
+## How do you compute number to pattern?
+
+They use a recursive algorithm.
+
+We observe that if we remove the final symbol from all lexicographically ordered $k$-mers, the resulting list is still ordered lexicographically.
+
+We also see that once we do this, every ($k$-1)-mer in the resulting list is repeated four times.
+
+So, in the case of $3$-mers and the pattern of $AGT$ we see that
+
+$PatternToNumber(AGT) = 4 \cdot PatternToNumber(AG) + SymbolToNumber(T) \\
+ = 8 + 3 = 1$
+
+Where $SymbolToNumber(symbol)$ is the function transforming symbols $A, C, G, T$ into their respective integers 0, 1, 2, and 3.
+
+By removing the final symbol of $Pattern$, denotes $LastSymbol(Pattern)$, we obtain a $(k-1)$-mer that we denote as $Prefix(Pattern)$.
+
+We can generalize this observation to the following formula:
+
+$
+PatternToNumber(Pattern) = 4 \cdot PatternToNumber(Prefix(Pattern)) + SymbolToNumber(LastSymbol(Pattern))
+$
+
+So we can construct the following recursive algorithm:
+
+```python
+def pattern_to_number(pattern):
+    if not pattern:
+        return 0
+    symbol = pattern[-1]
+    prefix = pattern[:-1]
+    return 4 * pattern_to_number(prefix) + symbol_to_number(symbol)
+```
 
 ## References
 
