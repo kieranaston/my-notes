@@ -35,6 +35,10 @@ nav:
       - Pricing and support: aws-cloud-practitioner-essentials/pricing-and-support.md
       - Migration and innovation: aws-cloud-practitioner-essentials/migration-and-innovation.md
       - Well-architected framework: aws-cloud-practitioner-essentials/well-architected-framework.md
+  - AWS Certified Solutions Architect:
+      - Launching EC2 instances: solutions-architect/launching-ec2-instances.md
+      - Introduction to Amazon Simple Storage Service: solutions-architect/amazon-s3.md
+      - Introduction to Amazon DynamoDB: solutions-architect/dynamodb.md
 
 markdown_extensions:
   - pymdownx.arithmatex:
