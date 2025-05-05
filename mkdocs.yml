@@ -39,6 +39,10 @@ nav:
       - Launching EC2 instances: solutions-architect/launching-ec2-instances.md
       - Introduction to Amazon Simple Storage Service: solutions-architect/amazon-s3.md
       - Introduction to Amazon DynamoDB: solutions-architect/dynamodb.md
+      - AWS infrastructure: solutions-architect/aws-infrastructure.md
+      - AWS management console: solutions-architect/aws-management-console.md
+      - AWS well-architected framework: solutions-architect/well-architected-framework.md
+      - Architecting fundamentals: solutions-architect/architecting-fundamentals.md
 
 markdown_extensions:
   - pymdownx.arithmatex:
