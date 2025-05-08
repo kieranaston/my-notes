@@ -9,25 +9,25 @@
       
       
       
-        <link rel="prev" href="../help-commands-and-pipes/">
+        <link rel="prev" href="../managing-multiple-accounts/">
       
       
-        <link rel="next" href="../text-and-grep-commands/">
+        <link rel="next" href="../vpc-fundamentals/">
       
       
-      <link rel="icon" href="../../../img/favicon.ico">
+      <link rel="icon" href="../../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.5">
     
     
       
-        <title>File commands and filters - Kieran's notes</title>
+        <title>IP addressing - Kieran's notes</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.8608ea7d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -40,7 +40,7 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#file-commands" class="md-skip">
+        <a href="#ip-addressing" class="md-skip">
           Skip to content
         </a>
       
@@ -80,9 +80,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Kieran&#39;s notes" class="md-header__button md-logo" aria-label="Kieran's notes" data-md-component="logo">
+    <a href="../.." title="Kieran&#39;s notes" class="md-header__button md-logo" aria-label="Kieran's notes" data-md-component="logo">
       
-  <img src="../../../img/logo.png" alt="logo">
+  <img src="../../img/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              File commands and filters
+              IP addressing
             
           </span>
         </div>
@@ -174,9 +174,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Kieran&#39;s notes" class="md-nav__button md-logo" aria-label="Kieran's notes" data-md-component="logo">
+    <a href="../.." title="Kieran&#39;s notes" class="md-nav__button md-logo" aria-label="Kieran's notes" data-md-component="logo">
       
-  <img src="../../../img/logo.png" alt="logo">
+  <img src="../../img/logo.png" alt="logo">
 
     </a>
     Kieran's notes
@@ -191,7 +191,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -209,19 +209,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -236,7 +234,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Linux essentials
@@ -247,19 +245,17 @@
                 
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
         
           
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
@@ -274,7 +270,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             Linux command line
@@ -288,7 +284,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../commands-and-permissions/" class="md-nav__link">
+      <a href="../../linux-essentials/linux-command-line/commands-and-permissions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -310,7 +306,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../help-commands-and-pipes/" class="md-nav__link">
+      <a href="../../linux-essentials/linux-command-line/help-commands-and-pipes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -329,31 +325,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    File commands and filters
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../linux-essentials/linux-command-line/file-commands/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -363,44 +338,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#file-display-commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      File display commands
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#file-maintenance-commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      File maintenance commands
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -413,7 +350,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../text-and-grep-commands/" class="md-nav__link">
+      <a href="../../linux-essentials/linux-command-line/text-and-grep-commands/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -435,7 +372,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../file-comparison-and-splitting/" class="md-nav__link">
+      <a href="../../linux-essentials/linux-command-line/file-comparison-and-splitting/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -501,7 +438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux-administration/utility-commands-user-management/" class="md-nav__link">
+      <a href="../../linux-essentials/linux-administration/utility-commands-user-management/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -574,7 +511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../bioinformatics-algorithms/where-in-genome-does-dna-replication-begin/" class="md-nav__link">
+      <a href="../../bioinformatics-algorithms/where-in-genome-does-dna-replication-begin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -639,7 +576,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../aws-cloud-practitioner-essentials/intro-to-aws/" class="md-nav__link">
+      <a href="../../aws-cloud-practitioner-essentials/intro-to-aws/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -661,7 +598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../aws-cloud-practitioner-essentials/compute-in-the-cloud/" class="md-nav__link">
+      <a href="../../aws-cloud-practitioner-essentials/compute-in-the-cloud/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -683,7 +620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../aws-cloud-practitioner-essentials/global-infrastructure-and-reliability/" class="md-nav__link">
+      <a href="../../aws-cloud-practitioner-essentials/global-infrastructure-and-reliability/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -705,7 +642,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../aws-cloud-practitioner-essentials/networking/" class="md-nav__link">
+      <a href="../../aws-cloud-practitioner-essentials/networking/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -727,7 +664,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../aws-cloud-practitioner-essentials/storage-and-databases/" class="md-nav__link">
+      <a href="../../aws-cloud-practitioner-essentials/storage-and-databases/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -749,7 +686,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../aws-cloud-practitioner-essentials/security/" class="md-nav__link">
+      <a href="../../aws-cloud-practitioner-essentials/security/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -771,7 +708,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../aws-cloud-practitioner-essentials/pricing-and-support/" class="md-nav__link">
+      <a href="../../aws-cloud-practitioner-essentials/pricing-and-support/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -793,7 +730,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../aws-cloud-practitioner-essentials/migration-and-innovation/" class="md-nav__link">
+      <a href="../../aws-cloud-practitioner-essentials/migration-and-innovation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -815,7 +752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../aws-cloud-practitioner-essentials/well-architected-framework/" class="md-nav__link">
+      <a href="../../aws-cloud-practitioner-essentials/well-architected-framework/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -841,17 +778,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -866,7 +805,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             AWS Certified Solutions Architect
@@ -880,7 +819,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../solutions-architect/launching-ec2-instances/" class="md-nav__link">
+      <a href="../launching-ec2-instances/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -902,7 +841,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../solutions-architect/amazon-s3/" class="md-nav__link">
+      <a href="../amazon-s3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -924,7 +863,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../solutions-architect/dynamodb/" class="md-nav__link">
+      <a href="../dynamodb/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -946,7 +885,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../solutions-architect/aws-infrastructure/" class="md-nav__link">
+      <a href="../aws-infrastructure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -968,7 +907,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../solutions-architect/aws-management-console/" class="md-nav__link">
+      <a href="../aws-management-console/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -990,7 +929,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../solutions-architect/well-architected-framework/" class="md-nav__link">
+      <a href="../well-architected-framework/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1012,7 +951,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../solutions-architect/architecting-fundamentals/" class="md-nav__link">
+      <a href="../architecting-fundamentals/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1034,7 +973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../solutions-architect/principals-and-identities/" class="md-nav__link">
+      <a href="../principals-and-identities/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1056,7 +995,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../solutions-architect/security-policies/" class="md-nav__link">
+      <a href="../security-policies/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1078,7 +1017,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../solutions-architect/managing-multiple-accounts/" class="md-nav__link">
+      <a href="../managing-multiple-accounts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1097,10 +1036,31 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../solutions-architect/ip-addressing/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    IP addressing
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1110,6 +1070,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ipv4-addresses" class="md-nav__link">
+    <span class="md-ellipsis">
+      IPv4 addresses
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ipv6-addresses" class="md-nav__link">
+    <span class="md-ellipsis">
+      IPv6 addresses
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classless-inter-domain-routing-cidr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classless inter-domain routing (CIDR)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws-supported-cidr-ranges" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS supported CIDR ranges
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1122,7 +1138,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../solutions-architect/vpc-fundamentals/" class="md-nav__link">
+      <a href="../vpc-fundamentals/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1171,18 +1187,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#file-display-commands" class="md-nav__link">
+  <a href="#ipv4-addresses" class="md-nav__link">
     <span class="md-ellipsis">
-      File display commands
+      IPv4 addresses
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#file-maintenance-commands" class="md-nav__link">
+  <a href="#ipv6-addresses" class="md-nav__link">
     <span class="md-ellipsis">
-      File maintenance commands
+      IPv6 addresses
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classless-inter-domain-routing-cidr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classless inter-domain routing (CIDR)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws-supported-cidr-ranges" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS supported CIDR ranges
     </span>
   </a>
   
@@ -1204,26 +1238,22 @@
 
 
 
-<h1 id="file-commands">File commands</h1>
-<h2 id="file-display-commands">File display commands</h2>
-<ul>
-<li><code>cat</code> views entire content</li>
-<li><code>more</code> views one page at a time</li>
-<li><code>less</code> views content in reverse order, one page at time</li>
-<li><code>head</code> gives the first few lines</li>
-<li><code>tail</code> gets you the last lines of a file</li>
-</ul>
-<h2 id="file-maintenance-commands">File maintenance commands</h2>
-<ul>
-<li><code>cp</code> copies a file from one location to another</li>
-<li><code>rm</code> removes a file</li>
-<li><code>mv</code> used to move location of file from one to another, or rename it</li>
-<li><code>mkdir</code> makes a directoy</li>
-<li><code>rmdir</code> or <code>rm -r</code> removes directory</li>
-<li><code>chgrp</code> changes group ownership</li>
-<li><code>chown</code> changes ownership</li>
-</ul>
-<p><strong>Source:</strong> <a href="https://alison.com/topic/learn/118894/file-commands-and-filters">Linux for Absolute Beginners: File Commands and Filters</a> by Imran Afzal, Allison.</p>
+<h1 id="ip-addressing">IP addressing</h1>
+<p>When you see an IP address slash something, it means we are representing a range of IP addresses.</p>
+<p>The bigger this number, the smaller the network is.</p>
+<p>The start identifies the network, the middle identifies the host, and the end identifies the range.</p>
+<h2 id="ipv4-addresses">IPv4 addresses</h2>
+<p>32-bit addresses. Bits grouped in four sets of 8 bits called octets.</p>
+<p>First two octets identify network, last two designate the resource within the network.</p>
+<h2 id="ipv6-addresses">IPv6 addresses</h2>
+<p>128-bit addresses. Eight groups of four hexadecimal digits with colon as separator.</p>
+<h2 id="classless-inter-domain-routing-cidr">Classless inter-domain routing (CIDR)</h2>
+<p>Method of assigning IP addresses improving efficiency of address distribution.</p>
+<p>Addresses specified in CIDR block.</p>
+<p>By default all VPCs and subnets need to have IPc4 CIDR blocks.</p>
+<p>Identifies network using dot notation and subnet mask using slash notation.</p>
+<h2 id="aws-supported-cidr-ranges">AWS supported CIDR ranges</h2>
+<p>Network can be identified using 16-28 bits in 32 bit IPv4 address. Resources in subnet can be identified using 4-16 bits in 32 bit IPv4 address. </p>
 
 
 
@@ -1270,10 +1300,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
       
