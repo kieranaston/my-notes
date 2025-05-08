@@ -43,6 +43,11 @@ nav:
       - AWS management console: solutions-architect/aws-management-console.md
       - AWS well-architected framework: solutions-architect/well-architected-framework.md
       - Architecting fundamentals: solutions-architect/architecting-fundamentals.md
+      - Principals and identities: solutions-architect/principals-and-identities.md
+      - Security policies: solutions-architect/security-policies.md
+      - Managing multiple accounts: solutions-architect/managing-multiple-accounts.md
+      - IP addressing: solutions-architect/ip-addressing.md
+      - VPC fundamentals: solutions-architect/vpc-fundamentals.md
 
 markdown_extensions:
   - pymdownx.arithmatex:
