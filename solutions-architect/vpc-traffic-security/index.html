@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../well-architected-framework/">
+        <link rel="prev" href="../elastic-ip-addresses-and-nat-gateways/">
       
       
-        <link rel="next" href="../principals-and-identities/">
+        <link rel="next" href="../compute-services/">
       
       
       <link rel="icon" href="../../img/favicon.ico">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Architecting fundamentals - Kieran's notes</title>
+        <title>VPC traffic security - Kieran's notes</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#architecting-fundamentals" class="md-skip">
+        <a href="#vpc-traffic-security" class="md-skip">
           Skip to content
         </a>
       
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Architecting fundamentals
+              VPC traffic security
             
           </span>
         </div>
@@ -948,31 +948,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Architecting fundamentals
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../architecting-fundamentals/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -982,50 +961,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#aws-services" class="md-nav__link">
-    <span class="md-ellipsis">
-      AWS services
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="AWS services">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#categories-of-aws-services" class="md-nav__link">
-    <span class="md-ellipsis">
-      Categories of AWS services
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1167,10 +1102,31 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../vpc-traffic-security/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    VPC traffic security
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1180,6 +1136,86 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#inbound-and-outbound-ipv4-traffic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inbound and outbound IPv4 traffic
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-acl-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network ACL rules
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security groups
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Security groups">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#security-group-chaining" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security group chaining
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-groups-vs-network-acls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security groups vs. Network ACLs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-make-a-subnet-public" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to make a subnet public?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1241,19 +1277,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#aws-services" class="md-nav__link">
+  <a href="#inbound-and-outbound-ipv4-traffic" class="md-nav__link">
     <span class="md-ellipsis">
-      AWS services
+      Inbound and outbound IPv4 traffic
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="AWS services">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-acl-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network ACL rules
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security groups
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Security groups">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#categories-of-aws-services" class="md-nav__link">
+  <a href="#security-group-chaining" class="md-nav__link">
     <span class="md-ellipsis">
-      Categories of AWS services
+      Security group chaining
     </span>
   </a>
   
@@ -1261,6 +1315,24 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-groups-vs-network-acls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security groups vs. Network ACLs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-make-a-subnet-public" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to make a subnet public?
+    </span>
+  </a>
   
 </li>
       
@@ -1280,146 +1352,39 @@
 
 
 
-<h1 id="architecting-fundamentals">Architecting fundamentals</h1>
-<h2 id="aws-services">AWS services</h2>
+<h1 id="vpc-traffic-security">VPC traffic security</h1>
+<p>Network ACLs act as stateless firewall on the entire subnet.</p>
+<p>Security groups are virtual firewalls acting on the instance level.</p>
+<h2 id="inbound-and-outbound-ipv4-traffic">Inbound and outbound IPv4 traffic</h2>
+<p>Every default VPC comes with a modifiable default network ACL. By default it allows all inbound and outbound IPv4 traffic.</p>
+<p>Custom ACLs by default deny all inbound and outbound traffic.</p>
+<h2 id="network-acl-rules">Network ACL rules</h2>
+<p><strong>Components of a network ACL rule:</strong></p>
 <ul>
-<li>Secure and robust</li>
-<li>Lots of services</li>
-<li>Pay as you go</li>
+<li>Rule number</li>
+<li>Type (type of traffic)</li>
+<li>Protocol</li>
+<li>Port range (listening port for the traffic)</li>
+<li>Source (for inbound traffic)</li>
+<li>Destination (for outbound traffic)</li>
+<li>Allow or deny</li>
 </ul>
-<p>The main benefit is agility.</p>
-<p><strong>Why customers move to AWS</strong>:</p>
+<h2 id="security-groups">Security groups</h2>
+<p>These allow traffic based on IP protocol, port, or IP address and use stateful rules.</p>
+<p>By default they include an outbound rule allowing all outbound traffic. If no outbound rules, no outbound traffic from that instance.</p>
+<p>Security groups are stateful.</p>
+<h3 id="security-group-chaining">Security group chaining</h3>
+<p>With a chain of security groups you can set up inbound and outbound rules in a way so that the traffic can only flow from top tier to bottom and back again.</p>
+<h2 id="security-groups-vs-network-acls">Security groups vs. Network ACLs</h2>
 <ul>
-<li>Agility<ul>
-<li>Accelerate time to market</li>
-<li>Increase innovation</li>
-<li>Scale seamlessly</li>
+<li>Security groups are a firewall for EC2 instances, and network ACLs are a firewall for subnets</li>
+<li>Security groups control traffic at instance level, and ACLs control traffic at subnet level</li>
+<li>Security groups only support allow rules, while network ACLs support both allow and deny rules</li>
+<li>Security groups are stateful while network ACLs stateless</li>
+<li>Security groups need to be assigned to instances while network ACLs automatically applied when instances added to subnet</li>
 </ul>
-</li>
-<li>Complexity and risk<ul>
-<li>Optimize costs</li>
-<li>Minimize security vulnerabilities</li>
-<li>Reduce management complexity</li>
-</ul>
-</li>
-</ul>
-<h3 id="categories-of-aws-services">Categories of AWS services</h3>
-<p><strong>Serverless</strong>:</p>
-<ul>
-<li>Amazon API Gateway<ul>
-<li>Create, publish, maintain, and secure RESTful and WebSocket APIs at any scale</li>
-</ul>
-</li>
-<li>Amazon Simple Queue Service (Amazon SQS)<ul>
-<li>Message queuing service that decouples and buffers communication between distributed application components</li>
-</ul>
-</li>
-<li>Amazon Simple Notification Service (Amazon SNS)<ul>
-<li>Messaging services enabling message delivery to multiple subscribers via push mechanisms like email, SMS, or Lambda</li>
-</ul>
-</li>
-<li>Amazon Kinesis<ul>
-<li>Real-time data streaming and processing at scale, enabling ingestion and analysis of large volumes of streaming data such as logs, events, and video</li>
-</ul>
-</li>
-</ul>
-<p><strong>Networking and Content Delivery</strong>:</p>
-<ul>
-<li>Amazon Virtual Private Cloud (Amazon VPC)<ul>
-<li>Lets you create a private, isolated network within AWS where you can launch and manage your cloud resources</li>
-</ul>
-</li>
-<li>VPC endpoints<ul>
-<li>Allow you to privately connect your VPC to AWS services without needing to go over the public internet</li>
-</ul>
-</li>
-<li>VPC traffic security<ul>
-<li>Includes tools like security groups and network ACLs that help control who can send or receive data in your VPC</li>
-</ul>
-</li>
-<li>VPC peering connection<ul>
-<li>A way to link two VPCs so they can communicate with each other using private IP addresses</li>
-</ul>
-</li>
-<li>Hybrid networking<ul>
-<li>Connects your on-premises network to AWS so you can use both together smoothly</li>
-</ul>
-</li>
-<li>AWS Transit Gateway<ul>
-<li>A central hub that makes it easier to connect multiple VPCs and on-premises networks all in one place</li>
-</ul>
-</li>
-</ul>
-<p><strong>Database</strong>:</p>
-<ul>
-<li>Amazon Relational Database Service (Amazon RDS)<ul>
-<li>Makes it easy to set up, run, and scale traditional SQL databases in the cloud without managing the hardware</li>
-</ul>
-</li>
-<li>AMazon DynamoDB, a NoSQL service<ul>
-<li>A fast, fully managed NoSQL database service designed for apps that need quick access to large amounts of unstructured data.</li>
-</ul>
-</li>
-</ul>
-<p><strong>Security, Identity, and Compliance</strong>:</p>
-<ul>
-<li>Mechanisms to define identity and access management policies in AWS accounts<ul>
-<li>Use IAM policies and roles to control who can access which AWS resources and what actions they can take.</li>
-</ul>
-</li>
-<li>AWS services which enable you to implement security and identity policies<ul>
-<li>Services like AWS IAM, AWS Organizations, and AWS Config help manage permissions, track changes, and enforce security rules.</li>
-</ul>
-</li>
-<li>How to protect your AWS infrastructure from distributed denial of service (DDoS) attacks<ul>
-<li>AWS Shield and AWS WAF protect your applications by detecting and blocking harmful traffic before it reaches your services.</li>
-</ul>
-</li>
-</ul>
-<p><strong>Management and Governance</strong>:</p>
-<ul>
-<li>AWS infrastructure management for applications<ul>
-<li>Services like AWS Systems Manager and AWS Config help you monitor, manage, and maintain your cloud resources.</li>
-</ul>
-</li>
-<li>AWS CloudFormation<ul>
-<li>Lets you describe your entire cloud setup in code so you can automate and consistently recreate your infrastructure.</li>
-</ul>
-</li>
-</ul>
-<p><strong>Storage</strong>:</p>
-<ul>
-<li>Amazon Simple Storage Service (Amazon S3)<ul>
-<li>A highly scalable object storage service used to store and retrieve any amount of data, like files, backups, and media.</li>
-</ul>
-</li>
-<li>AWS Storage Gateway<ul>
-<li>Connects on-premises software with cloud storage to back up and archive data seamlessly.</li>
-</ul>
-</li>
-<li>Amazon FSx<ul>
-<li>Provides managed file systems in the cloud that support Windows, Lustre, and other workloads requiring shared storage.</li>
-</ul>
-</li>
-</ul>
-<p><strong>AWS Cost Management</strong>:</p>
-<ul>
-<li>AWS Billing and Cost Management<ul>
-<li>Helps you track your usage, manage budgets, and forecast or analyze your AWS spending.</li>
-</ul>
-</li>
-</ul>
-<p><strong>Containers</strong>:</p>
-<ul>
-<li>Microservices architecture<ul>
-<li>A way to build applications as a collection of small, independent services that can be developed and deployed separately.</li>
-</ul>
-</li>
-<li>Managing Microservices on AWS<ul>
-<li>Services like Amazon ECS, EKS, and AWS App Mesh help run, scale, and connect containerized microservices efficiently.</li>
-</ul>
-</li>
-</ul>
+<h2 id="how-to-make-a-subnet-public">How to make a subnet public?</h2>
+<p>Route outbound traffic through the internet gateway.</p>
 <p><strong>Source:</strong> <a href="https://explore.skillbuilder.aws/learn/learning-plans/2159/aws-certified-solutions-architect-associate-subscription-partner-subscription">AWS Certified Solutions Architect - Associate (Subscription - Partner Subscription)</a>, AWS Training &amp; Certification.</p>
 
 

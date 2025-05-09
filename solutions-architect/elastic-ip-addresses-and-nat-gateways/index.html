@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../well-architected-framework/">
+        <link rel="prev" href="../vpc-fundamentals/">
       
       
-        <link rel="next" href="../principals-and-identities/">
+        <link rel="next" href="../vpc-traffic-security/">
       
       
       <link rel="icon" href="../../img/favicon.ico">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Architecting fundamentals - Kieran's notes</title>
+        <title>Elastic IP addresses and NAT gateways - Kieran's notes</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#architecting-fundamentals" class="md-skip">
+        <a href="#elastic-ip-addresses-and-nat-gateways" class="md-skip">
           Skip to content
         </a>
       
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Architecting fundamentals
+              Elastic IP addresses and NAT gateways
             
           </span>
         </div>
@@ -948,31 +948,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Architecting fundamentals
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../architecting-fundamentals/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -982,50 +961,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#aws-services" class="md-nav__link">
-    <span class="md-ellipsis">
-      AWS services
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="AWS services">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#categories-of-aws-services" class="md-nav__link">
-    <span class="md-ellipsis">
-      Categories of AWS services
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1145,10 +1080,31 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../elastic-ip-addresses-and-nat-gateways/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Elastic IP addresses and NAT gateways
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1158,6 +1114,80 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#elastic-ip-address" class="md-nav__link">
+    <span class="md-ellipsis">
+      Elastic IP address
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elastic-network-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Elastic network interface
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nat-gateways" class="md-nav__link">
+    <span class="md-ellipsis">
+      NAT gateways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#associate-elastic-ip-addresses-with-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Associate elastic IP addresses with resources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connecting-private-subnets-to-the-internet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connecting private subnets to the internet
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploy-vpc-across-multiple-availability-zones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deploy VPC across multiple availability zones
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1241,26 +1271,56 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#aws-services" class="md-nav__link">
+  <a href="#elastic-ip-address" class="md-nav__link">
     <span class="md-ellipsis">
-      AWS services
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="AWS services">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#categories-of-aws-services" class="md-nav__link">
-    <span class="md-ellipsis">
-      Categories of AWS services
+      Elastic IP address
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#elastic-network-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Elastic network interface
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nat-gateways" class="md-nav__link">
+    <span class="md-ellipsis">
+      NAT gateways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#associate-elastic-ip-addresses-with-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Associate elastic IP addresses with resources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connecting-private-subnets-to-the-internet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connecting private subnets to the internet
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploy-vpc-across-multiple-availability-zones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deploy VPC across multiple availability zones
+    </span>
+  </a>
   
 </li>
       
@@ -1280,146 +1340,35 @@
 
 
 
-<h1 id="architecting-fundamentals">Architecting fundamentals</h1>
-<h2 id="aws-services">AWS services</h2>
+<h1 id="elastic-ip-addresses-and-nat-gateways">Elastic IP addresses and NAT gateways</h1>
+<h2 id="elastic-ip-address">Elastic IP address</h2>
+<p>Elastic IP address is static, public IPv4 address for dynamic cloud computing.</p>
+<p>It can be associated with any instance or network interface for any VPC in your account.</p>
+<p>Can mask failure of an instance by quickly remapping address to another instance in VPC.</p>
+<p>Purpose is to permit association with instance or network interface.</p>
+<p>Can be thought of as a business phone number - you keep same one even if you move offices or switch phones.</p>
+<h2 id="elastic-network-interface">Elastic network interface</h2>
+<p>Virtual network interface that:</p>
 <ul>
-<li>Secure and robust</li>
-<li>Lots of services</li>
-<li>Pay as you go</li>
+<li>Can be moved amongst different instances in same AZ</li>
+<li>Maintains same IP address, elastic IP address, MAC address</li>
 </ul>
-<p>The main benefit is agility.</p>
-<p><strong>Why customers move to AWS</strong>:</p>
-<ul>
-<li>Agility<ul>
-<li>Accelerate time to market</li>
-<li>Increase innovation</li>
-<li>Scale seamlessly</li>
-</ul>
-</li>
-<li>Complexity and risk<ul>
-<li>Optimize costs</li>
-<li>Minimize security vulnerabilities</li>
-<li>Reduce management complexity</li>
-</ul>
-</li>
-</ul>
-<h3 id="categories-of-aws-services">Categories of AWS services</h3>
-<p><strong>Serverless</strong>:</p>
-<ul>
-<li>Amazon API Gateway<ul>
-<li>Create, publish, maintain, and secure RESTful and WebSocket APIs at any scale</li>
-</ul>
-</li>
-<li>Amazon Simple Queue Service (Amazon SQS)<ul>
-<li>Message queuing service that decouples and buffers communication between distributed application components</li>
-</ul>
-</li>
-<li>Amazon Simple Notification Service (Amazon SNS)<ul>
-<li>Messaging services enabling message delivery to multiple subscribers via push mechanisms like email, SMS, or Lambda</li>
-</ul>
-</li>
-<li>Amazon Kinesis<ul>
-<li>Real-time data streaming and processing at scale, enabling ingestion and analysis of large volumes of streaming data such as logs, events, and video</li>
-</ul>
-</li>
-</ul>
-<p><strong>Networking and Content Delivery</strong>:</p>
-<ul>
-<li>Amazon Virtual Private Cloud (Amazon VPC)<ul>
-<li>Lets you create a private, isolated network within AWS where you can launch and manage your cloud resources</li>
-</ul>
-</li>
-<li>VPC endpoints<ul>
-<li>Allow you to privately connect your VPC to AWS services without needing to go over the public internet</li>
-</ul>
-</li>
-<li>VPC traffic security<ul>
-<li>Includes tools like security groups and network ACLs that help control who can send or receive data in your VPC</li>
-</ul>
-</li>
-<li>VPC peering connection<ul>
-<li>A way to link two VPCs so they can communicate with each other using private IP addresses</li>
-</ul>
-</li>
-<li>Hybrid networking<ul>
-<li>Connects your on-premises network to AWS so you can use both together smoothly</li>
-</ul>
-</li>
-<li>AWS Transit Gateway<ul>
-<li>A central hub that makes it easier to connect multiple VPCs and on-premises networks all in one place</li>
-</ul>
-</li>
-</ul>
-<p><strong>Database</strong>:</p>
-<ul>
-<li>Amazon Relational Database Service (Amazon RDS)<ul>
-<li>Makes it easy to set up, run, and scale traditional SQL databases in the cloud without managing the hardware</li>
-</ul>
-</li>
-<li>AMazon DynamoDB, a NoSQL service<ul>
-<li>A fast, fully managed NoSQL database service designed for apps that need quick access to large amounts of unstructured data.</li>
-</ul>
-</li>
-</ul>
-<p><strong>Security, Identity, and Compliance</strong>:</p>
-<ul>
-<li>Mechanisms to define identity and access management policies in AWS accounts<ul>
-<li>Use IAM policies and roles to control who can access which AWS resources and what actions they can take.</li>
-</ul>
-</li>
-<li>AWS services which enable you to implement security and identity policies<ul>
-<li>Services like AWS IAM, AWS Organizations, and AWS Config help manage permissions, track changes, and enforce security rules.</li>
-</ul>
-</li>
-<li>How to protect your AWS infrastructure from distributed denial of service (DDoS) attacks<ul>
-<li>AWS Shield and AWS WAF protect your applications by detecting and blocking harmful traffic before it reaches your services.</li>
-</ul>
-</li>
-</ul>
-<p><strong>Management and Governance</strong>:</p>
-<ul>
-<li>AWS infrastructure management for applications<ul>
-<li>Services like AWS Systems Manager and AWS Config help you monitor, manage, and maintain your cloud resources.</li>
-</ul>
-</li>
-<li>AWS CloudFormation<ul>
-<li>Lets you describe your entire cloud setup in code so you can automate and consistently recreate your infrastructure.</li>
-</ul>
-</li>
-</ul>
-<p><strong>Storage</strong>:</p>
-<ul>
-<li>Amazon Simple Storage Service (Amazon S3)<ul>
-<li>A highly scalable object storage service used to store and retrieve any amount of data, like files, backups, and media.</li>
-</ul>
-</li>
-<li>AWS Storage Gateway<ul>
-<li>Connects on-premises software with cloud storage to back up and archive data seamlessly.</li>
-</ul>
-</li>
-<li>Amazon FSx<ul>
-<li>Provides managed file systems in the cloud that support Windows, Lustre, and other workloads requiring shared storage.</li>
-</ul>
-</li>
-</ul>
-<p><strong>AWS Cost Management</strong>:</p>
-<ul>
-<li>AWS Billing and Cost Management<ul>
-<li>Helps you track your usage, manage budgets, and forecast or analyze your AWS spending.</li>
-</ul>
-</li>
-</ul>
-<p><strong>Containers</strong>:</p>
-<ul>
-<li>Microservices architecture<ul>
-<li>A way to build applications as a collection of small, independent services that can be developed and deployed separately.</li>
-</ul>
-</li>
-<li>Managing Microservices on AWS<ul>
-<li>Services like Amazon ECS, EKS, and AWS App Mesh help run, scale, and connect containerized microservices efficiently.</li>
-</ul>
-</li>
-</ul>
+<h2 id="nat-gateways">NAT gateways</h2>
+<p>Using NAT, private IP networks (like for databases and backend services) using unregistered IP addresses are able to connect to the internet.</p>
+<p>One-way outbound connection between pricate subnet instances and internet or other AWS services.</p>
+<h2 id="associate-elastic-ip-addresses-with-resources">Associate elastic IP addresses with resources</h2>
+<p>Elastic IP address can be associated with any instance or network interface in any VPC.</p>
+<h2 id="connecting-private-subnets-to-the-internet">Connecting private subnets to the internet</h2>
+<p>NAT gateway can be used as a one-way connection between private subnet instances and the internet or other aws services.</p>
+<p><strong>How to connect component in private subnet to internet:</strong></p>
+<ol>
+<li>Route table for private subnet sends all IPv4 internet traffic to NAT gateway</li>
+<li>NAT gateway uses Elastic IP as source IP for traffic from private subnet</li>
+<li>Route table for public subnet sends all internet traffic to internet gateway. Not supported for IPv6</li>
+</ol>
+<h2 id="deploy-vpc-across-multiple-availability-zones">Deploy VPC across multiple availability zones</h2>
+<p>This creates architecture achieving high availability, distributing traffic while secure.</p>
+<p>If you have an outage in one AZ you can fail over to other.</p>
 <p><strong>Source:</strong> <a href="https://explore.skillbuilder.aws/learn/learning-plans/2159/aws-certified-solutions-architect-associate-subscription-partner-subscription">AWS Certified Solutions Architect - Associate (Subscription - Partner Subscription)</a>, AWS Training &amp; Certification.</p>
 
 
