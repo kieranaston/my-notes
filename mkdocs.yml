@@ -51,6 +51,7 @@ nav:
       - Elastic IP addresses and NAT gateways: solutions-architect/elastic-ip-addresses-and-nat-gateways.md
       - VPC traffic security: solutions-architect/vpc-traffic-security.md
       - Compute services: solutions-architect/compute-services.md
+      - EC2 instances: solutions-architect/ec2-instances.md
 
 markdown_extensions:
   - pymdownx.arithmatex:
