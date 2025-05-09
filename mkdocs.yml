@@ -48,6 +48,9 @@ nav:
       - Managing multiple accounts: solutions-architect/managing-multiple-accounts.md
       - IP addressing: solutions-architect/ip-addressing.md
       - VPC fundamentals: solutions-architect/vpc-fundamentals.md
+      - Elastic IP addresses and NAT gateways: solutions-architect/elastic-ip-addresses-and-nat-gateways.md
+      - VPC traffic security: solutions-architect/vpc-traffic-security.md
+      - Compute services: solutions-architect/compute-services.md
 
 markdown_extensions:
   - pymdownx.arithmatex:
