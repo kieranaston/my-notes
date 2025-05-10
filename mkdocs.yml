@@ -54,6 +54,7 @@ nav:
       - EC2 instances: solutions-architect/ec2-instances.md
       - Storage for EC2 instance: solutions-architect/storage-ec2-instances.md
       - Amazon EC2 pricing options: solutions-architect/ec2-pricing.md
+      - AWS Lambda: solutions-architect/aws-lambda.md
 
 markdown_extensions:
   - pymdownx.arithmatex:
