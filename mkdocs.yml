@@ -9,8 +9,6 @@ theme:
     scheme: slate
     primary: black
     accent: blue
-  features:
-    - navigation.instant
 
 nav:
   - Home: index.md
@@ -36,25 +34,39 @@ nav:
       - Migration and innovation: aws-cloud-practitioner-essentials/migration-and-innovation.md
       - Well-architected framework: aws-cloud-practitioner-essentials/well-architected-framework.md
   - AWS Certified Solutions Architect:
-      - Launching EC2 instances: solutions-architect/launching-ec2-instances.md
-      - Introduction to Amazon Simple Storage Service: solutions-architect/amazon-s3.md
-      - Introduction to Amazon DynamoDB: solutions-architect/dynamodb.md
-      - AWS infrastructure: solutions-architect/aws-infrastructure.md
-      - AWS management console: solutions-architect/aws-management-console.md
-      - AWS well-architected framework: solutions-architect/well-architected-framework.md
-      - Architecting fundamentals: solutions-architect/architecting-fundamentals.md
-      - Principals and identities: solutions-architect/principals-and-identities.md
-      - Security policies: solutions-architect/security-policies.md
-      - Managing multiple accounts: solutions-architect/managing-multiple-accounts.md
-      - IP addressing: solutions-architect/ip-addressing.md
-      - VPC fundamentals: solutions-architect/vpc-fundamentals.md
-      - Elastic IP addresses and NAT gateways: solutions-architect/elastic-ip-addresses-and-nat-gateways.md
-      - VPC traffic security: solutions-architect/vpc-traffic-security.md
-      - Compute services: solutions-architect/compute-services.md
-      - EC2 instances: solutions-architect/ec2-instances.md
-      - Storage for EC2 instance: solutions-architect/storage-ec2-instances.md
-      - Amazon EC2 pricing options: solutions-architect/ec2-pricing.md
-      - AWS Lambda: solutions-architect/aws-lambda.md
+      - Amazon EC2 lab:
+          - Launching EC2 instances: solutions-architect/lab-ec2-instances/launching-ec2-instances.md
+      - Amazon S3 lab:
+          - Introduction to Amazon S3: solutions-architect/lab-amazon-s3/amazon-s3.md
+      - Amazon DynamoDB lab:
+          - Introduction to Amazon DynamoDB: solutions-architect/lab-dynamodb/dynamodb.md
+      - Module 1 - Architecting fundamentals:
+          - Architecting fundamentals: solutions-architect/architecting-fundamentals/architecting-fundamentals.md
+          - AWS infrastructure: solutions-architect/architecting-fundamentals/aws-infrastructure.md
+          - Well-architected framework: solutions-architect/architecting-fundamentals/well-architected-framework.md
+      - Module 2 - Account security:
+          - Managing multiple accounts: solutions-architect/account-security/managing-multiple-accounts.md
+          - Principals and identities: solutions-architect/account-security/principals-and-identities.md
+          - Security policies: solutions-architect/account-security/security-policies.md
+      - Module 3 - Networking 1:
+          - Elastic IP addresses and NAT gateways: solutions-architect/networking-1/elastic-ip-addresses-and-nat-gateways.md
+          - IP addressing: solutions-architect/networking-1/ip-addressing.md
+          - VPC fundamentals: solutions-architect/networking-1/vpc-fundamentals.md
+          - VPC traffic and security: solutions-architect/networking-1/vpc-traffic-security.md
+      - Module 4 - Compute:
+          - AWS Lambda: solutions-architect/compute/aws-lambda.md
+          - Compute services: solutions-architect/compute/compute-services.md
+          - EC2 instances: solutions-architect/compute/ec2-instances.md
+          - EC2 pricing: solutions-architect/compute/ec2-pricing.md
+          - Storage and EC2 instances: solutions-architect/compute/storage-ec2-instances.md
+      - Module 5 - Storage:
+          - Storage services: solutions-architect/storage/storage-services.md
+          - Additional S3 features: solutions-architect/storage/additional-s3-features.md
+          - Data migration tools: solutions-architect/storage/data-migration-tools.md
+          - Securing objects: solutions-architect/storage/securing-objects.md
+          - Shared file systems: solutions-architect/storage/shared-file-systems.md
+          - Amazon S3 storage: solutions-architect/storage/storage-amazon-s3.md
+          - Storing objects: solutions-architect/storage/storing-objects.md
 
 markdown_extensions:
   - pymdownx.arithmatex:

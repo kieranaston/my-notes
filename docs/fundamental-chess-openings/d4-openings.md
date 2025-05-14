@@ -16,9 +16,9 @@ The obvious response for white is 2 Nf3, or 2 f4. Either way white's object of a
 
 One of the two logical responses is 1 d4 d5, with the main difference of this versus e4 being that the d5 pawn is defended (unlike the e5 pawn in 1 e4 e5).
 
-1 d4 d5 can actually lead to white being able to attac black's stronghold because of the possibility of 2 c4 (Queen's Gambit).
+1 d4 d5 can actually lead to white being able to attack black's stronghold because of the possibility of 2 c4 (Queen's Gambit).
 
-If black declines by protecting the panw on d5 with 2 ... e6 (Queen's Gambit Declines) or 2 ... c6 (Slav Defence), white gains space and can break with e4 later. This can be facilitated by white playing Nc3 and then e4 at some point.
+If black declines by protecting the pawn on d5 with 2 ... e6 (Queen's Gambit Declines) or 2 ... c6 (Slav Defence), white gains space and can break with e4 later. This can be facilitated by white playing Nc3 and then e4 at some point.
 
 If black accepts by taking the white pawn on c4 with 2 dxc4 (Queen's Gambit Accepted), white can regain the lost material with better development by playing e4 or e3 and controlling the center.
 
@@ -46,3 +46,10 @@ The idea of 3 ... b6 is to get the black bishop on b7 so that it controls the e4
 
 The idea of 3 ... Bb4+ is that white must block the bishop and this can either transpose into a Nimzo-Indian Defence or result in an exchange of pieces.
 
+#### 2 c4 g6
+
+In this line, after 3 Nc3 black can play 3 ... Bg7 for the King's Indian Defence, or black can play 3 ... d5 for the Grunfeld Defence.
+
+#### 2 c4 c5
+
+This is called the Benoni.
