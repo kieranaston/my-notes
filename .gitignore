@@ -1,9 +1,7 @@
-site/
-
-docs/aws-cloud-practitioner-essentials/
-docs/bioinformatics-algorithms/
-docs/fundamental-chess-openings/
-docs/linux-essentials/
-docs/solutions-architect/
-
+/site/
+/docs/aws-cloud-practitioner-essentials/
+/docs/bioinformatics-algorithms/
+/docs/fundamental-chess-openings/
+/docs/linux-essentials/
+/docs/solutions-architect/
 .DS_Store
