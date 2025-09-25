@@ -11,19 +11,19 @@
       
       
       
-      <link rel="icon" href="../../../img/favicon.ico">
+      <link rel="icon" href="../../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.5">
     
     
       
-        <title>Architecting fundamentals - Kieran's notes</title>
+        <title>Importing and cleaning data - Kieran's notes</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.8608ea7d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -36,7 +36,7 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#architecting-fundamentals" class="md-skip">
+        <a href="#importing-and-cleaning-data" class="md-skip">
           Skip to content
         </a>
       
@@ -76,9 +76,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Kieran&#39;s notes" class="md-header__button md-logo" aria-label="Kieran's notes" data-md-component="logo">
+    <a href="../.." title="Kieran&#39;s notes" class="md-header__button md-logo" aria-label="Kieran's notes" data-md-component="logo">
       
-  <img src="../../../img/logo.png" alt="logo">
+  <img src="../../img/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -95,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Architecting fundamentals
+              Importing and cleaning data
             
           </span>
         </div>
@@ -170,9 +170,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Kieran&#39;s notes" class="md-nav__button md-logo" aria-label="Kieran's notes" data-md-component="logo">
+    <a href="../.." title="Kieran&#39;s notes" class="md-nav__button md-logo" aria-label="Kieran's notes" data-md-component="logo">
       
-  <img src="../../../img/logo.png" alt="logo">
+  <img src="../../img/logo.png" alt="logo">
 
     </a>
     Kieran's notes
@@ -187,7 +187,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -244,7 +244,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../data-science/importing-cleaning-data.md" class="md-nav__link">
+      <a href="../../data-science/importing-cleaning-data.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -293,26 +293,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#aws-services" class="md-nav__link">
+  <a href="#some-info-on-libraries" class="md-nav__link">
     <span class="md-ellipsis">
-      AWS services
+      Some info on libraries
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="AWS services">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#categories-of-aws-services" class="md-nav__link">
-    <span class="md-ellipsis">
-      Categories of AWS services
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -332,147 +317,25 @@
 
 
 
-<h1 id="architecting-fundamentals">Architecting fundamentals</h1>
-<h2 id="aws-services">AWS services</h2>
-<ul>
-<li>Secure and robust</li>
-<li>Lots of services</li>
-<li>Pay as you go</li>
-</ul>
-<p>The main benefit is agility.</p>
-<p><strong>Why customers move to AWS</strong>:</p>
-<ul>
-<li>Agility<ul>
-<li>Accelerate time to market</li>
-<li>Increase innovation</li>
-<li>Scale seamlessly</li>
-</ul>
-</li>
-<li>Complexity and risk<ul>
-<li>Optimize costs</li>
-<li>Minimize security vulnerabilities</li>
-<li>Reduce management complexity</li>
-</ul>
-</li>
-</ul>
-<h3 id="categories-of-aws-services">Categories of AWS services</h3>
-<p><strong>Serverless</strong>:</p>
-<ul>
-<li>Amazon API Gateway<ul>
-<li>Create, publish, maintain, and secure RESTful and WebSocket APIs at any scale</li>
-</ul>
-</li>
-<li>Amazon Simple Queue Service (Amazon SQS)<ul>
-<li>Message queuing service that decouples and buffers communication between distributed application components</li>
-</ul>
-</li>
-<li>Amazon Simple Notification Service (Amazon SNS)<ul>
-<li>Messaging services enabling message delivery to multiple subscribers via push mechanisms like email, SMS, or Lambda</li>
-</ul>
-</li>
-<li>Amazon Kinesis<ul>
-<li>Real-time data streaming and processing at scale, enabling ingestion and analysis of large volumes of streaming data such as logs, events, and video</li>
-</ul>
-</li>
-</ul>
-<p><strong>Networking and Content Delivery</strong>:</p>
-<ul>
-<li>Amazon Virtual Private Cloud (Amazon VPC)<ul>
-<li>Lets you create a private, isolated network within AWS where you can launch and manage your cloud resources</li>
-</ul>
-</li>
-<li>VPC endpoints<ul>
-<li>Allow you to privately connect your VPC to AWS services without needing to go over the public internet</li>
-</ul>
-</li>
-<li>VPC traffic security<ul>
-<li>Includes tools like security groups and network ACLs that help control who can send or receive data in your VPC</li>
-</ul>
-</li>
-<li>VPC peering connection<ul>
-<li>A way to link two VPCs so they can communicate with each other using private IP addresses</li>
-</ul>
-</li>
-<li>Hybrid networking<ul>
-<li>Connects your on-premises network to AWS so you can use both together smoothly</li>
-</ul>
-</li>
-<li>AWS Transit Gateway<ul>
-<li>A central hub that makes it easier to connect multiple VPCs and on-premises networks all in one place</li>
-</ul>
-</li>
-</ul>
-<p><strong>Database</strong>:</p>
-<ul>
-<li>Amazon Relational Database Service (Amazon RDS)<ul>
-<li>Makes it easy to set up, run, and scale traditional SQL databases in the cloud without managing the hardware</li>
-</ul>
-</li>
-<li>AMazon DynamoDB, a NoSQL service<ul>
-<li>A fast, fully managed NoSQL database service designed for apps that need quick access to large amounts of unstructured data.</li>
-</ul>
-</li>
-</ul>
-<p><strong>Security, Identity, and Compliance</strong>:</p>
-<ul>
-<li>Mechanisms to define identity and access management policies in AWS accounts<ul>
-<li>Use IAM policies and roles to control who can access which AWS resources and what actions they can take.</li>
-</ul>
-</li>
-<li>AWS services which enable you to implement security and identity policies<ul>
-<li>Services like AWS IAM, AWS Organizations, and AWS Config help manage permissions, track changes, and enforce security rules.</li>
-</ul>
-</li>
-<li>How to protect your AWS infrastructure from distributed denial of service (DDoS) attacks<ul>
-<li>AWS Shield and AWS WAF protect your applications by detecting and blocking harmful traffic before it reaches your services.</li>
-</ul>
-</li>
-</ul>
-<p><strong>Management and Governance</strong>:</p>
-<ul>
-<li>AWS infrastructure management for applications<ul>
-<li>Services like AWS Systems Manager and AWS Config help you monitor, manage, and maintain your cloud resources.</li>
-</ul>
-</li>
-<li>AWS CloudFormation<ul>
-<li>Lets you describe your entire cloud setup in code so you can automate and consistently recreate your infrastructure.</li>
-</ul>
-</li>
-</ul>
-<p><strong>Storage</strong>:</p>
-<ul>
-<li>Amazon Simple Storage Service (Amazon S3)<ul>
-<li>A highly scalable object storage service used to store and retrieve any amount of data, like files, backups, and media.</li>
-</ul>
-</li>
-<li>AWS Storage Gateway<ul>
-<li>Connects on-premises software with cloud storage to back up and archive data seamlessly.</li>
-</ul>
-</li>
-<li>Amazon FSx<ul>
-<li>Provides managed file systems in the cloud that support Windows, Lustre, and other workloads requiring shared storage.</li>
-</ul>
-</li>
-</ul>
-<p><strong>AWS Cost Management</strong>:</p>
-<ul>
-<li>AWS Billing and Cost Management<ul>
-<li>Helps you track your usage, manage budgets, and forecast or analyze your AWS spending.</li>
-</ul>
-</li>
-</ul>
-<p><strong>Containers</strong>:</p>
-<ul>
-<li>Microservices architecture<ul>
-<li>A way to build applications as a collection of small, independent services that can be developed and deployed separately.</li>
-</ul>
-</li>
-<li>Managing Microservices on AWS<ul>
-<li>Services like Amazon ECS, EKS, and AWS App Mesh help run, scale, and connect containerized microservices efficiently.</li>
-</ul>
-</li>
-</ul>
-<p><strong>Source:</strong> <a href="https://explore.skillbuilder.aws/learn/learning-plans/2159/aws-certified-solutions-architect-associate-subscription-partner-subscription">AWS Certified Solutions Architect - Associate (Subscription - Partner Subscription)</a>, AWS Training &amp; Certification.</p>
+<h1 id="importing-and-cleaning-data">Importing and cleaning data</h1>
+<h2 id="some-info-on-libraries">Some info on libraries</h2>
+<p>BeautifulSoup helps parse HTML and other markup languages like XML.</p>
+<p>Reads a csv into a pandas dataframe.</p>
+<p>Might be good idea to examine the names of the attributes, the types, etc. Because pandas guesses what typing to use for basic csv files without any metadata determining types.</p>
+<p>So sometimes you might have to change the typing of some of the attributes.</p>
+<p>Figure out how to see a preview of a cleaned dataframe on the same line in VScode after importing it. This must be a vscode things.</p>
+<p>Markup files like XML or JSON can be viewed nicely in a browser because you can open and collapse branches of the tree.</p>
+<p>Function for parsing XML:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">parse_xml</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+    <span class="n">tree</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+    <span class="n">root</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">get_root</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([{</span><span class="n">el</span><span class="o">.</span><span class="n">tag</span><span class="p">:</span> <span class="n">el</span><span class="o">.</span><span class="n">text</span> <span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">row</span><span class="p">}</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">root</span><span class="p">])</span>
+</code></pre></div>
+<p>Using BeautifulSoup to parse XML:</p>
+<div class="highlight"><pre><span></span><code><span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">xml_url</span><span class="p">)</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="s1">&#39;xml&#39;</span><span class="p">)</span>
+</code></pre></div>
+<p>Can use cross tabulation to see relationship between two different attributes in a dataframe.</p>
+<p>SQL not case-sensitive.</p>
 
 
 
@@ -519,10 +382,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
       
