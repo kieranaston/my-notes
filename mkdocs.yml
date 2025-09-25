@@ -12,61 +12,8 @@ theme:
 
 nav:
   - Home: index.md
-  - Linux essentials:
-      - Linux command line:
-          - Commands and permissions: linux-essentials/linux-command-line/commands-and-permissions.md
-          - Help commands and pipes: linux-essentials/linux-command-line/help-commands-and-pipes.md
-          - File commands and filters: linux-essentials/linux-command-line/file-commands.md
-          - Text and grep commands: linux-essentials/linux-command-line/text-and-grep-commands.md
-          - File comparison and splitting: linux-essentials/linux-command-line/file-comparison-and-splitting.md
-      - Linux administration:
-          - Utility commands and user management: linux-essentials/linux-administration/utility-commands-user-management.md
-  - Bioinformatics algorithms:
-      - Where in the genome does DNA replication begin?: bioinformatics-algorithms/where-in-genome-does-dna-replication-begin.md
-  - AWS Cloud Practitioner Essentials:
-      - Introduction to Amazon Web Services (AWS): aws-cloud-practitioner-essentials/intro-to-aws.md
-      - Compute in the cloud: aws-cloud-practitioner-essentials/compute-in-the-cloud.md
-      - Global infrastructure and reliability: aws-cloud-practitioner-essentials/global-infrastructure-and-reliability.md
-      - Networking: aws-cloud-practitioner-essentials/networking.md
-      - Storage and databases: aws-cloud-practitioner-essentials/storage-and-databases.md
-      - Security: aws-cloud-practitioner-essentials/security.md
-      - Pricing and support: aws-cloud-practitioner-essentials/pricing-and-support.md
-      - Migration and innovation: aws-cloud-practitioner-essentials/migration-and-innovation.md
-      - Well-architected framework: aws-cloud-practitioner-essentials/well-architected-framework.md
-  - AWS Certified Solutions Architect:
-      - Amazon EC2 lab:
-          - Launching EC2 instances: solutions-architect/lab-ec2-instances/launching-ec2-instances.md
-      - Amazon S3 lab:
-          - Introduction to Amazon S3: solutions-architect/lab-amazon-s3/amazon-s3.md
-      - Amazon DynamoDB lab:
-          - Introduction to Amazon DynamoDB: solutions-architect/lab-dynamodb/dynamodb.md
-      - Module 1 - Architecting fundamentals:
-          - Architecting fundamentals: solutions-architect/architecting-fundamentals/architecting-fundamentals.md
-          - AWS infrastructure: solutions-architect/architecting-fundamentals/aws-infrastructure.md
-          - Well-architected framework: solutions-architect/architecting-fundamentals/well-architected-framework.md
-      - Module 2 - Account security:
-          - Managing multiple accounts: solutions-architect/account-security/managing-multiple-accounts.md
-          - Principals and identities: solutions-architect/account-security/principals-and-identities.md
-          - Security policies: solutions-architect/account-security/security-policies.md
-      - Module 3 - Networking 1:
-          - Elastic IP addresses and NAT gateways: solutions-architect/networking-1/elastic-ip-addresses-and-nat-gateways.md
-          - IP addressing: solutions-architect/networking-1/ip-addressing.md
-          - VPC fundamentals: solutions-architect/networking-1/vpc-fundamentals.md
-          - VPC traffic and security: solutions-architect/networking-1/vpc-traffic-security.md
-      - Module 4 - Compute:
-          - AWS Lambda: solutions-architect/compute/aws-lambda.md
-          - Compute services: solutions-architect/compute/compute-services.md
-          - EC2 instances: solutions-architect/compute/ec2-instances.md
-          - EC2 pricing: solutions-architect/compute/ec2-pricing.md
-          - Storage and EC2 instances: solutions-architect/compute/storage-ec2-instances.md
-      - Module 5 - Storage:
-          - Storage services: solutions-architect/storage/storage-services.md
-          - Additional S3 features: solutions-architect/storage/additional-s3-features.md
-          - Data migration tools: solutions-architect/storage/data-migration-tools.md
-          - Securing objects: solutions-architect/storage/securing-objects.md
-          - Shared file systems: solutions-architect/storage/shared-file-systems.md
-          - Amazon S3 storage: solutions-architect/storage/storage-amazon-s3.md
-          - Storing objects: solutions-architect/storage/storing-objects.md
+  - Python data science topics:
+        - Importing and cleaning data: python-data-science/importing-cleaning-data.md
 
 markdown_extensions:
   - pymdownx.arithmatex:
