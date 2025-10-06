@@ -13,7 +13,10 @@ theme:
 nav:
   - Home: index.md
   - Python data science topics:
-        - Importing and cleaning data: python-data-science/importing-cleaning-data.md
+        - Reading data: python-data-science/reading-data.md
+        - SQLite and pandas: python-data-science/sqlite-pandas.md
+        - Basic Python data operations: python-data-science/data-operations.md
+        - Working with strings in Python: python-data-science/python-strings.md
 
 markdown_extensions:
   - pymdownx.arithmatex:
