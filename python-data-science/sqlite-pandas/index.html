@@ -9,6 +9,10 @@
       
       
       
+        <link rel="prev" href="../reading-data/">
+      
+      
+        <link rel="next" href="../data-operations/">
       
       
       <link rel="icon" href="../../img/favicon.ico">
@@ -16,7 +20,7 @@
     
     
       
-        <title>Pricing and support - Kieran's notes</title>
+        <title>SQLite and pandas - Kieran's notes</title>
       
     
     
@@ -60,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#pricing-and-support" class="md-skip">
+        <a href="#sqlite-integration-with-pandas" class="md-skip">
           Skip to content
         </a>
       
@@ -95,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Pricing and support
+              SQLite and pandas
             
           </span>
         </div>
@@ -205,17 +209,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -230,7 +236,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Python data science topics
@@ -244,7 +250,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python-data-science/reading-data/" class="md-nav__link">
+      <a href="../reading-data/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -263,10 +269,31 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../python-data-science/sqlite-pandas/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    SQLite and pandas
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -276,6 +303,89 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creating-an-sqlite-database-from-a-pandas-dataframe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating an SQLite database from a pandas DataFrame
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#executing-an-sql-query" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executing an SQL query
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cross-tabulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cross-tabulation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checking-for-missing-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checking for missing values
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calculating-the-mean-age-using-pandas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calculating the mean age using pandas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calculating-the-mean-age-using-sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calculating the mean age using SQL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#closing-the-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Closing the connection
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -288,7 +398,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python-data-science/data-operations/" class="md-nav__link">
+      <a href="../data-operations/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -310,7 +420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python-data-science/python-strings/" class="md-nav__link">
+      <a href="../python-strings/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -359,147 +469,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#aws-free-tier" class="md-nav__link">
+  <a href="#creating-an-sqlite-database-from-a-pandas-dataframe" class="md-nav__link">
     <span class="md-ellipsis">
-      AWS Free Tier
+      Creating an SQLite database from a pandas DataFrame
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#aws-pricing-concepts" class="md-nav__link">
+  <a href="#executing-an-sql-query" class="md-nav__link">
     <span class="md-ellipsis">
-      AWS Pricing Concepts
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="AWS Pricing Concepts">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#aws-pricing-calculator" class="md-nav__link">
-    <span class="md-ellipsis">
-      AWS Pricing Calculator
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#aws-lambda-pricing" class="md-nav__link">
-    <span class="md-ellipsis">
-      AWS Lambda Pricing
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#amazon-ec2-pricing" class="md-nav__link">
-    <span class="md-ellipsis">
-      Amazon EC2 Pricing
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#amazon-s3-pricing" class="md-nav__link">
-    <span class="md-ellipsis">
-      Amazon S3 Pricing
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#aws-billing-dashboard" class="md-nav__link">
-    <span class="md-ellipsis">
-      AWS billing dashboard
+      Executing an SQL query
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#consolidated-billing" class="md-nav__link">
+  <a href="#cross-tabulation" class="md-nav__link">
     <span class="md-ellipsis">
-      Consolidated billing
+      Cross-tabulation
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#aws-budgets" class="md-nav__link">
+  <a href="#checking-for-missing-values" class="md-nav__link">
     <span class="md-ellipsis">
-      AWS budgets
+      Checking for missing values
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#aws-cost-explorer" class="md-nav__link">
+  <a href="#calculating-the-mean-age-using-pandas" class="md-nav__link">
     <span class="md-ellipsis">
-      AWS cost explorer
+      Calculating the mean age using pandas
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#aws-support" class="md-nav__link">
+  <a href="#calculating-the-mean-age-using-sql" class="md-nav__link">
     <span class="md-ellipsis">
-      AWS support
+      Calculating the mean age using SQL
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="AWS support">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#basic-support" class="md-nav__link">
-    <span class="md-ellipsis">
-      Basic support
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#developer-business-enterprise-on-ramp-enterprise-support" class="md-nav__link">
-    <span class="md-ellipsis">
-      Developer, business, enterprise on-ramp, enterprise support
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#technical-account-manager-tam" class="md-nav__link">
-    <span class="md-ellipsis">
-      Technical account manager (TAM)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#aws-marketplace" class="md-nav__link">
+  <a href="#closing-the-connection" class="md-nav__link">
     <span class="md-ellipsis">
-      AWS marketplace
+      Closing the connection
     </span>
   </a>
   
@@ -521,73 +547,47 @@
 
 
 
-<h1 id="pricing-and-support">Pricing and support</h1>
-<h2 id="aws-free-tier">AWS Free Tier</h2>
-<p>Has always free, 12 months free, and trial options.</p>
-<h2 id="aws-pricing-concepts">AWS Pricing Concepts</h2>
-<p>Pay for what you use. Pay less when you reserve. Pay less when you use more.</p>
-<h3 id="aws-pricing-calculator">AWS Pricing Calculator</h3>
-<p>Get estimates for different AWS services. Can organize them by groups (a group could represent one of your cost centers, for example).</p>
-<h3 id="aws-lambda-pricing">AWS Lambda Pricing</h3>
-<p>Charged based on number of requests for your functions and time it takes them to run. 1 mill free requests, 3.2 million seconds of compute time per month.</p>
-<p>Compute Savings Plan: lower costs, commit to consistent usage over 1-year or 3-year term.</p>
-<h3 id="amazon-ec2-pricing">Amazon EC2 Pricing</h3>
-<p>Pay only for compute time you use.</p>
-<p>Can significantly reduce costs using Spot instances.</p>
-<h3 id="amazon-s3-pricing">Amazon S3 Pricing</h3>
-<p>Cost components:</p>
-<ul>
-<li>Storage</li>
-<li>Requests and data retrievals</li>
-<li>Data transfer</li>
-<li>Management and replication</li>
-</ul>
-<h2 id="aws-billing-dashboard">AWS billing dashboard</h2>
-<ul>
-<li>Compare current balance with previous month, get forecast based on usage</li>
-<li>View spending by service</li>
-<li>View free tier usage by service</li>
-<li>Cost explorer, create budgets</li>
-<li>Purchase and manage savings plans</li>
-<li>AWS cost and usage reports</li>
-</ul>
-<h2 id="consolidated-billing">Consolidated billing</h2>
-<p>Receive single bill for all accounts in your organization (up to 4 by default).</p>
-<p>Can review itemized charges on each account.</p>
-<p>Can share bulk idscount pricing.</p>
-<h2 id="aws-budgets">AWS budgets</h2>
-<p>Create budgets to plan service usage, costs, instance reservations.</p>
-<p>Info updates three times a day to help determine whether meeting budget.</p>
-<p>Get notified when usage exceeds.</p>
-<h2 id="aws-cost-explorer">AWS cost explorer</h2>
-<p>Visualize, understand, manage AWS costs and usage.</p>
-<p>Custom filters and groups.</p>
-<h2 id="aws-support">AWS support</h2>
-<p>Support plans:</p>
-<ul>
-<li>Basic</li>
-<li>Developer</li>
-<li>Business</li>
-<li>Enterprise on-ramp</li>
-<li>Enterprise</li>
-</ul>
-<h3 id="basic-support">Basic support</h3>
-<p>Free for all customers. Whitepapers, documentation, support communities. Can contact AWS for billing questions and service limit increases.</p>
-<p>Limited selection of AWS trusted advisor checks.</p>
-<p>AWS personal health dashboard: provides alerts and guidance when AWS is experiencing events affecting you.</p>
-<h3 id="developer-business-enterprise-on-ramp-enterprise-support">Developer, business, enterprise on-ramp, enterprise support</h3>
-<p>Additional ability to open unrestricted number of technical support cases. Pay-by-month, no long-term contracts.</p>
-<p>From lowest to highest cost: Developer, business and enterprise on-ramp, enterprise.</p>
-<p>Only business, enterprise on-ramp, and enterprise support include all trusted advisor checks.</p>
-<h3 id="technical-account-manager-tam">Technical account manager (TAM)</h3>
-<p>Only available to enterprise on-ramp and enterprise support plans.</p>
-<p>Primary point of contact.</p>
-<p>Helps across all AWS services.</p>
-<p>Expert engineering guidance.</p>
-<h2 id="aws-marketplace">AWS marketplace</h2>
-<p>Digital catalog including thousands of software listings from independent software vendors. Find, test, and buy software that runs on AWS.</p>
-<p>Explore by industry and use case.</p>
-<p><strong>Source:</strong> <a href="https://www.aws.training/Details/eLearning?id=60697">AWS Cloud Practitioner Essentials</a>, AWS Training &amp; Certification.</p>
+<h1 id="sqlite-integration-with-pandas">SQLite integration with pandas</h1>
+<h2 id="creating-an-sqlite-database-from-a-pandas-dataframe">Creating an SQLite database from a pandas DataFrame</h2>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sqlite3</span>
+
+<span class="n">titanic</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+<span class="c1"># If the database file doesn&#39;t exist it will be created. Otherwise it will be overwritten.</span>
+<span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;titanic.db&quot;</span><span class="p">)</span>
+
+<span class="n">titanic</span><span class="o">.</span><span class="n">to_sql</span><span class="p">(</span><span class="s2">&quot;titanic&quot;</span><span class="p">,</span> <span class="n">conn</span><span class="p">,</span> <span class="n">if_exists</span><span class="o">=</span><span class="s2">&quot;replace&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="c1"># index=False means we don&#39;t want to save the dataframe index as a column in the database</span>
+<span class="c1"># this is the label that uniquely identifies each row in the dataframe</span>
+<span class="c1"># If the table already exists, it will be replaced</span>
+</code></pre></div>
+<h2 id="executing-an-sql-query">Executing an SQL query</h2>
+<div class="highlight"><pre><span></span><code><span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">SELECT pclass, age, survived FROM titanic</span>
+<span class="s2">WHERE sex=&#39;female&#39; ORDER BY age desc</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="c1"># Execute the SQL query and load the results into a DataFrame</span>
+<span class="c1"># read_sql_query is used to execute a SQL query and return the result as a DataFrame</span>
+<span class="n">females</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">conn</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="cross-tabulation">Cross-tabulation</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Used to analyze the relationship between two attributes</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">females</span><span class="p">[</span><span class="s2">&quot;Pclass&quot;</span><span class="p">],</span> <span class="n">females</span><span class="p">[</span><span class="s2">&quot;Survived&quot;</span><span class="p">]))</span>
+</code></pre></div>
+<h2 id="checking-for-missing-values">Checking for missing values</h2>
+<p><code>print("Missing age values:", titanic["Age"].isnull().sum())</code></p>
+<h2 id="calculating-the-mean-age-using-pandas">Calculating the mean age using pandas</h2>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mean age (pandas):&quot;</span><span class="p">,</span> <span class="n">titanic</span><span class="p">[</span><span class="s2">&quot;Age&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">skipna</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+<span class="c1"># skipna=True is the default behaviour</span>
+</code></pre></div>
+<h2 id="calculating-the-mean-age-using-sql">Calculating the mean age using SQL</h2>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mean age(SQL):&quot;</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="s2">&quot;SELECT avg(Age) from titanic&quot;</span><span class="p">,</span> <span class="n">conn</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+<span class="c1"># pd.read_dql executes an SQL query and returns the result as a DataFrame</span>
+<span class="c1"># result is 1x1 dataframe, so we use .iloc to access the scalar value</span>
+</code></pre></div>
+<h2 id="closing-the-connection">Closing the connection</h2>
+<p><code>conn.close()</code></p>
 
 
 
