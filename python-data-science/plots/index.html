@@ -9,6 +9,10 @@
       
       
       
+        <link rel="prev" href="../python-strings/">
+      
+      
+        <link rel="next" href="../regression/">
       
       
       <link rel="icon" href="../../img/favicon.ico">
@@ -16,7 +20,7 @@
     
     
       
-        <title>Plots - Kieran's notes</title>
+        <title>Working with plots - Kieran's notes</title>
       
     
     
@@ -95,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Plots
+              Working with plots
             
           </span>
         </div>
@@ -205,17 +209,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -230,7 +236,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Python data science topics
@@ -315,6 +321,262 @@
   
   <span class="md-ellipsis">
     Working with strings in Python
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Working with plots
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Working with plots
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#seaborn-vs-matplotlib" class="md-nav__link">
+    <span class="md-ellipsis">
+      Seaborn vs matplotlib
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#histograms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Histograms
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#global-styles-and-themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Global styles and themes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formatting-axis-numbers-ticks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formatting axis numbers (ticks)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-scatterplot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic scatterplot
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-color-to-a-scatterplot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding color to a scatterplot
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controlling-bins-and-binwidth-w-histograms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Controlling bins and binwidth w/ histograms
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#log-scaled-axes" class="md-nav__link">
+    <span class="md-ellipsis">
+      log-scaled axes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#density-plots-kernel-density-estimates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Density plots (kernel density estimates)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bar-charts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bar charts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjust-font-size-for-long-labels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adjust font size for long labels
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#split-apply-combine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Split-apply-combine
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#barplot-of-aggregated-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Barplot of aggregated values
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scatter-plot-with-transparency-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scatter plot with transparency / alpha
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2d-histograms" class="md-nav__link">
+    <span class="md-ellipsis">
+      2D histograms
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hexbin-plot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hexbin plot
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#categorical-vs-continuous-jitter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Categorical vs continuous (jitter)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stacked-proportional-bar-charts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stacked / proportional bar charts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rotate-axis-labels" class="md-nav__link">
+    <span class="md-ellipsis">
+      rotate axis labels
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../regression/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Regression
     
   </span>
   
