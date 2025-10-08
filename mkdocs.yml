@@ -17,6 +17,8 @@ nav:
         - SQLite and pandas: python-data-science/sqlite-pandas.md
         - Basic Python data operations: python-data-science/data-operations.md
         - Working with strings in Python: python-data-science/python-strings.md
+        - Working with plots: python-data-science/plots.md
+        - Regression: python-data-science/regression.md
 
 markdown_extensions:
   - pymdownx.arithmatex:
